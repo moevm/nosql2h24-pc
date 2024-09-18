@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 /hello_world/node_modules
 /hello_world/_front/node_modules
 /hello_world/_front/_public
+=======
+/node_modules
+/front/node_modules
+/front/_public
+>>>>>>> 1bb3c6b2939a7acc08003a19a6d78099460efe90
 /.idea
