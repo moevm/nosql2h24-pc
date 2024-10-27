@@ -2,7 +2,7 @@ import gulp from "gulp"
 import browserSync from "browser-sync";
 import gulpReplace from "gulp-replace";
 
-import dartSass from 'sass';
+import * as dartSass from 'sass';
 import gulpSass from 'gulp-sass';
 const sass = gulpSass(dartSass);
 
