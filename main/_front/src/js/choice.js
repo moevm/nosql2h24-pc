@@ -5,7 +5,7 @@ choiceLists.forEach((choiceList) => {
 	choiceItems.forEach((choice) => {
 		if (choice.classList.contains("active")) {
 			choiceList.dataset.value = choice.dataset.value;
-			console.log(choice.dataset.value);
+			// console.log(choice.dataset.value);
 		}
 		choice.addEventListener("click", (e) => {
 			choiceItems.forEach((choice) => {

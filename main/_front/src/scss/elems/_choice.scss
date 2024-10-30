@@ -32,4 +32,30 @@
 			background-color: lighten($primary, 5%);
 		}
 	}
+
+	&-with_img {
+		display: flex;
+		align-items: center;
+		column-gap: 15px;
+		font-size: 18px;
+		padding: 15px;
+		min-width: 236px;
+		text-align: start;
+		line-height: 21px;
+		min-height: 72px;
+		& svg {
+			min-width: 40px;
+			min-height: 40px;
+			fill: #000;
+			transition: fill .2s ease;
+
+		}
+		&.active svg{
+			fill: #fff;
+		}
+	}
+	&-text_sm {
+		font-size: 16px;
+		line-height: 19px;
+	}
 }
