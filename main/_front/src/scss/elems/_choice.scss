@@ -1,0 +1,35 @@
+@import "../vars";
+
+.choice {
+	display: flex;
+	gap: 10px;
+	&-grid {
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+}
+
+.choice__elem {
+	min-width: 110px;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 35px;
+	border-radius: 10px;
+	padding: 0 8px;
+	background-color: $secondary;
+
+	transition: background-color .2s ease, color .2s ease;
+	&-wide {
+		min-width: 150px;
+	}
+	&:hover {
+		background-color: $secondary-hover;
+	}
+	&.active{
+		background-color: $primary;
+		color: #fff;
+		&:hover {
+			background-color: lighten($primary, 5%);
+		}
+	}
+}

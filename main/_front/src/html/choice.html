@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../scss/style.scss">
+    <script src="../js/choice.js" defer></script>
+</head>
+<body>
+<div class="section">
+    <div class="container">
+<!--     Разумеется, элемент ниже не нужен. Он добавлен для пояснения и разграничений       -->
+        <div style="margin-top: 20px;">Сортировать по показателю</div>
+        <div class="choice" id="sort_by">
+            <button class="choice__elem active" data-value="price">Цена</button>
+            <button class="choice__elem" data-value="rating">Рейтинг</button>
+            <button class="choice__elem" data-value="popular">Популярность</button>
+        </div>
+
+        <!--     Разумеется, элемент ниже не нужен. Он добавлен для пояснения и разграничений       -->
+        <div style="margin-top: 20px;" >Сортировать по</div>
+        <div class="choice" id="sort_in">
+            <button class="choice__elem choice__elem-wide active" data-value="to up">По возрастанию</button>
+            <button class="choice__elem choice__elem-wide" data-value="to down">По убыванию</button>
+        </div>
+
+        <!--     Разумеется, элемент ниже не нужен. Он добавлен для пояснения и разграничений       -->
+        <div style="margin-top: 20px;">Выберите сокет (разъем для процессора на материнской плате)</div>
+        <div class="choice choice-grid" style="width: 236px">
+            <button class="choice__elem active" data-value="LGA 1151">LGA 1151</button>
+            <button class="choice__elem" data-value="LGA 1151 v2">LGA 1151 v2</button>
+            <button class="choice__elem" data-value="LGA 1200">LGA 1200</button>
+            <button class="choice__elem" data-value="LGA 1700">LGA 1700</button>
+            <button class="choice__elem" data-value="AM4">AM4</button>
+            <button class="choice__elem" data-value="AM5">AM5</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>
