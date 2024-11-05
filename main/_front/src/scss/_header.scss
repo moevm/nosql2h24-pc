@@ -1,0 +1,58 @@
+.header-inner
+{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.header
+{
+	padding-top: 7.5px ;
+	padding-bottom: 7.5px;
+	border-bottom: 1px #D8D8D8 solid;
+}
+.nav
+{
+	display: flex;
+	align-items: center;
+	font-size: 18px;
+	font-weight: 400;
+}
+.header-logo
+{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.name
+{
+	font-size: 28px;
+	font-weight: 400;
+	color:#712CF9;
+	text-decoration: none;
+	vertical-align: middle;
+	margin: 15px;
+}
+.logo
+{
+	fill: #712CF9;
+	cursor: pointer;
+}
+.link
+{
+	color: #636363;
+	text-decoration: none;
+	opacity: 1;
+	vertical-align: middle;
+	margin: 15px;
+}
+.icon
+{
+	margin-left: 15px;
+}
+
+.link:hover, .name:hover,.logo:hover,.icon:hover
+{
+	fill:#712CF9;
+	color: #712CF9;
+	transition: fill 0.2s ease, color 0.2s ease;
+}
