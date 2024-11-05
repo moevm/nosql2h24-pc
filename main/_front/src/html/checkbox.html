@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+				content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<link rel="stylesheet" href="../scss/style.scss">
+	<script src="../js/checkbox.js" defer></script>
+</head>
+<body>
+<div class="section">
+	<div class="container">
+		<div id="socket" class="checkbox-group" style="width: 236px;" data-value="socket">
+			<h4 class="checkbox-group__title">Cокет</h4>
+
+			<div class="checkbox" data-value="AM4">
+				<label>
+					<input type="checkbox" class="checkbox-real"/>
+					<span class="checkbox-custom"></span>
+					<span>AM4</span>
+				</label>
+			</div>
+			<div class="checkbox" data-value="AM5">
+				<label>
+					<input type="checkbox" class="checkbox-real"/>
+					<span class="checkbox-custom"></span>
+					<span>AM5</span>
+				</label>
+			</div>
+			<div class="checkbox" data-value="LGA 1151 v2">
+				<label>
+					<input type="checkbox" class="checkbox-real"/>
+					<span class="checkbox-custom"></span>
+					<span>LGA 1151 v2</span>
+				</label>
+			</div>
+			<div class="checkbox" data-value="LGA 1200">
+				<label>
+					<input type="checkbox" class="checkbox-real"/>
+					<span class="checkbox-custom"></span>
+					<span>LGA 1200</span>
+				</label>
+			</div>
+			<div class="checkbox" data-value="LGA 1700">
+				<label>
+					<input type="checkbox" class="checkbox-real"/>
+					<span class="checkbox-custom"></span>
+					<span>LGA 1700</span>
+				</label>
+			</div>
+		</div>
+		<div style="margin-bottom: 12px;"></div>
+		<div id="ram_count" class="checkbox-group" style="width: 236px;" data-value="ram_count">
+			<h4 class="checkbox-group__title">Количество слотов ОЗУ</h4>
+
+			<div class="checkbox" data-value="2">
+				<label>
+					<input type="checkbox" class="checkbox-real"/>
+					<span class="checkbox-custom"></span>
+					<span>2</span>
+				</label>
+			</div>
+			<div class="checkbox" data-value="4">
+				<label>
+					<input type="checkbox" class="checkbox-real"/>
+					<span class="checkbox-custom"></span>
+					<span>4</span>
+				</label>
+			</div>
+		</div>
+		<div style="margin-bottom: 12px;"></div>
+		<button class="btn" id="checkbox_btn">Отобразить результаты в консоль</button>
+	</div>
+</div>
+</body>
+</html>

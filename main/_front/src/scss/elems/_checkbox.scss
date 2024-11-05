@@ -1,0 +1,71 @@
+@import "../vars";
+
+.checkbox-group {
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+}
+
+.checkbox-group__title {
+	font-size: 18px;
+	margin-bottom: 6px;
+	font-weight: 500;
+}
+
+.checkbox {
+	display: flex;
+	align-items: center;
+	font-size: 18px;
+	width: 100%;
+	user-select: none;
+	label {
+		height: 28px;
+		width: 100%;
+	}
+}
+
+.checkbox-real {
+	width: 0;
+	height: 0;
+	opacity: 0;
+	position: absolute;
+	z-index: -1;
+}
+
+.checkbox-real:focus + .checkbox-custom {
+	box-shadow: 0 0 4px 1px $secondary-hover;
+}
+
+.checkbox-custom {
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	background-color: $white;
+	border: 1px solid $secondary-hover;
+	border-radius: 4px;
+	margin-right: 10px;
+	vertical-align: sub;
+	transition: background-color .2s ease, border .2s ease;
+
+	position: relative;
+}
+
+.checkbox-custom::before {
+	content: "";
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background-image: url("../../img/tick.svg");
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.checkbox-real:checked +.checkbox-custom {
+	background-color: $primary;
+	border-color: $primary;
+}
