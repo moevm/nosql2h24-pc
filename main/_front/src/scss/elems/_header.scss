@@ -1,0 +1,50 @@
+@import "../vars";
+
+.header {
+	padding: 15px 0;
+	border-bottom: 1px solid $secondary-hover;
+}
+
+.header__inner {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.header__logo {
+	display: flex;
+	column-gap: 30px;
+	align-items: center;
+	cursor: pointer;
+	img {
+		width: 50px;
+		height: 50px;
+	}
+}
+
+.header__title {
+	font-size: 28px;
+	color: $primary;
+}
+
+.header__nav {
+	display: flex;
+	column-gap: 20px;
+	align-items: center;
+}
+
+.header__link {
+	font-size: 18px;
+	color: #636363;
+	transition: color .2s ease;
+	&:hover, &.active {
+		color: $primary;
+		& svg {
+			fill: $primary;
+		}
+	}
+	& svg {
+		fill: #636363;
+		transition: fill .2s ease;
+	}
+}
