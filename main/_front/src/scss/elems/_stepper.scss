@@ -1,0 +1,52 @@
+@import "../vars";
+
+.stepper {
+	display: inline-flex;
+	align-items: center;
+	border-radius: 8px;
+	overflow: hidden;
+	border: 2px solid $primary;
+}
+
+.stepper__minus, .stepper__plus {
+	background-color: $primary;
+	padding: 4px 6px;
+	width: 41px;
+	height: 36px;
+	transition: background-color .2s ease, opacity .2s ease;
+
+	& svg {
+		fill: #fff;
+		transition: fill .2s ease;
+	}
+	&:hover {
+		background-color: #fff;
+		& svg {
+			fill: $primary;
+		}
+	}
+	&:disabled {
+		opacity: 0.4;
+		cursor: not-allowed;
+		background-color: $primary;
+		& svg {
+			fill: #fff;
+		}
+	}
+}
+
+.stepper__minus {
+	border-right: 2px solid $primary;
+}
+
+.stepper__plus {
+	border-left: 2px solid $primary;
+}
+
+
+.stepper__value {
+	font-size: 22px;
+	width: 44px;
+	line-height: 36px;
+	text-align: center;
+}
