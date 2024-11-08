@@ -1,0 +1,61 @@
+@import "../vars";
+
+.input{
+  position: relative;
+}
+
+.input__text{
+  width: 100%;
+  padding: 16px 15px;
+  border: 2px solid #D0D0D0;
+  background: transparent;
+  border-radius: 10px;
+  outline: none;
+  line-height: 24px;
+  color: #000;
+  transition: border .3s ease;
+  font-size: 18px;
+}
+
+.input span{
+  position: absolute;
+  left: 0;
+  top: 0;
+  line-height: 24px;
+  margin: 17px 3px;
+  padding: 0 12px;
+  pointer-events: none;
+  font-size: 18px;
+  color: #555555;
+  font-weight: 400;
+  border-radius: 6px;
+  transition: .2s ease;
+}
+
+.input__text:not(:placeholder-shown) ~ span,
+.input__text:focus ~ span
+{
+  transform: translate(19px, -7px);
+  font-size: 14px;
+  line-height: 18px;
+  padding: 0 8px;
+  border-radius: 4px;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  margin: 0;
+  color: #fff;
+}
+
+.input__text:not(:placeholder-shown) ~ span{
+  background: #878787;
+}
+.input__text:focus ~ span{
+  background: $primary;
+}
+
+.input__text:not(:placeholder-shown){
+  border: 2px solid #878787;
+}
+.input__text:focus{
+  border: 2px solid $primary;
+}
