@@ -12,6 +12,14 @@
 	width: 100%;
 }
 
+.add-center__price {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 20px;
+}
+
+
 .add-center__count {
 	display: flex;
 	align-items: center;
