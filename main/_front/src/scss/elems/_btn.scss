@@ -13,6 +13,11 @@
 	border: 1px solid $primary;
 	padding: 12px;
 	transition: background-color 0.2s ease, color 0.2s ease, opacity 0.2s ease;
+	&-big {
+		min-width: 275px;
+		font-size: 24px;
+		line-height: 28px;
+	}
 	&:hover {
 		background-color:#fff;
 		color: $primary;
