@@ -3,6 +3,7 @@ import mongoose from "mongoose";
 import cors from "cors";
 import {login, register} from "./controllers/AdminController.js";
 import checkAuth from "./utils/checkAuth.js";
+import {addComponent, getAll, getOne} from "./controllers/ComponentsController.js";
 const app = express();
 
 const PORT = 4444;
@@ -22,8 +23,14 @@ app.get('/', (req, res) => {
 });
 
 app.post('/auth/register', register);
-
 app.post('/auth/login', login);
+
+
+
+
+app.post('/components', checkAuth, addComponent)
+app.get('/components', getAll)
+app.get('/components/:id', getOne);
 
 
 app.listen(PORT, (err) => {
