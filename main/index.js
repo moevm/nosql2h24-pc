@@ -4,22 +4,36 @@ import cors from "cors";
 import {login, register} from "./controllers/AdminController.js";
 import checkAuth from "./utils/checkAuth.js";
 import {addComponent, getAll, getOne} from "./controllers/ComponentsController.js";
+import path from 'path';
 const app = express();
+
+const isProduction = false;
+const folder = isProduction? "dist": "_public";
 
 const PORT = 4444;
 const __dirname = import.meta.dirname;
-
 mongoose.connect("mongodb://127.0.0.1:27017/build_pc")
 	.then(() => console.log('DB ok'))
 	.catch((err) => console.warn('DB error: ', err));
 
 app.use(cors())
 app.use(express.json());
-app.use(express.static(__dirname + '/_front'));
+app.use((req, res, next) => {
+	if (req.path.endsWith('.html')){
+		return res.status(404).send('404 Not Found');
+	}
+	next();
+})
+app.use(express.static(__dirname + `/_front/${folder}`));
 
 
 app.get('/', (req, res) => {
-	res.send("Hello world!");
+	console.log(path.join(__dirname + `/_front/${folder}/components.html`));
+	res.sendFile(path.join(__dirname + `/_front/${folder}/components.html`));
+});
+
+app.get('/login', (req, res) =>  {
+	res.sendFile(path.join(__dirname + `/_front/${folder}/login.html`));
 });
 
 app.post('/auth/register', register);
