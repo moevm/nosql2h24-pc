@@ -7,20 +7,21 @@
           initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Document</title>
-	<link rel="stylesheet" href="../scss/style.scss">
-<!--	<script src="../js/add-edit.js" defer></script>-->
+	<link rel="stylesheet" href="css/style.css">
+	<script src="./js/components.js" defer></script>
+ 
 </head>
 <body>
-
+ 
 <header class="header">
 	<div class="container">
 		<div class="header__inner">
 			<div class="header__logo">
-				<img src="../img/logo.svg" alt="logo">
+				<img src="./img/logo.svg" alt="logo">
 				<h2 class="header__title">Пора Cобрать ПК</h2>
 			</div>
 			<div class="header__nav">
-				<a href="/" class="header__link active">Комплектующие</a>
+				<a href="#!" class="header__link active">Комплектующие</a>
 				<a href="#!" class="header__link">Конфигуратор</a>
 				<a href="#!" class="header__link">Готовые сборки</a>
 				<a href="#!" class="header__link">
@@ -41,7 +42,7 @@
 						</g>
 					</svg>
 				</a>
-				<a href="login" class="header__link">
+				<a href="login.html" class="header__link">
 					<svg viewBox="0 0 40 40" width="40.000000" height="40.000000">
 						<g clip-path="url(#clip2_8)">
 							<path id="path"
@@ -59,14 +60,13 @@
 </header>
 <section class="title">
 	<div class="container">
-		<h1 class="title__text">Добавление/Редактирование</h1>
+		<h1 class="title__text">Комплектующие</h1>
 	</div>
 </section>
-<section class="add-edit">
+<section class="components">
 	<div class="container">
-		<div class="add-edit__inner">
-			<div class="add-edit__choice grey_background">
-				<h4 class="add-edit__choice-subtitle subtitle">Выберите<br/>тип продукта</h4>
+		<div class="components__inner">
+			<div class="components__choice grey_background">
 				<div class="choice choice-grid">
 					<button class="choice__elem choice__elem-with_img active" data-value="cpu">
 						<svg width="40.000000" height="40.000000" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
@@ -198,97 +198,67 @@
 						Корпус
 					</button>
 				</div>
+				<h3 class="components__choice-title" style="display: none;">Фильтры</h3>
+				<div id="socket" class="checkbox-group" style="display: none;" data-value="socket">
+					<h4 class="checkbox-group__title">Cокет</h4>
+ 
+					<div class="checkbox" data-value="AM4">
+						<label>
+							<input type="checkbox" class="checkbox-real"/>
+							<span class="checkbox-custom"></span>
+							<span>AM4</span>
+						</label>
+					</div>
+					<div class="checkbox" data-value="AM5">
+						<label>
+							<input type="checkbox" class="checkbox-real"/>
+							<span class="checkbox-custom"></span>
+							<span>AM5</span>
+						</label>
+					</div>
+					<div class="checkbox" data-value="LGA 1151 v2">
+						<label>
+							<input type="checkbox" class="checkbox-real"/>
+							<span class="checkbox-custom"></span>
+							<span>LGA 1151 v2</span>
+						</label>
+					</div>
+					<div class="checkbox" data-value="LGA 1200">
+						<label>
+							<input type="checkbox" class="checkbox-real"/>
+							<span class="checkbox-custom"></span>
+							<span>LGA 1200</span>
+						</label>
+					</div>
+					<div class="checkbox" data-value="LGA 1700">
+						<label>
+							<input type="checkbox" class="checkbox-real"/>
+							<span class="checkbox-custom"></span>
+							<span>LGA 1700</span>
+						</label>
+					</div>
+				</div>
 			</div>
-			<!--			-->
-			<div class="add-edit__center">
-				<div class="add-center grey_background">
-
-					<div class="subtitle">Введите название продукта</div>
-					<div class="add-center__input input">
-						<input class="input__text" type="text" placeholder="">
-						<span>Название</span>
-					</div>
-					<div class="add-center__price">
-						<div class="subtitle">Введите цену:</div>
-						<div class="input">
-							<input class="input__text" type="number" placeholder="" min="1" max="9999999">
-							<span>Цена</span>
+			<div class="components__main">
+				<div class="components__sort sort grey_background">
+					<div class="sort__text">Сортировка:</div>
+					<div class="sort__block">
+						<div class="choice" id="sort_by">
+							<button class="choice__elem active" data-value="price">Цена</button>
+							<button class="choice__elem" data-value="rating">Рейтинг</button>
 						</div>
-					</div>
-					<div class="add-center__count">
-						<h4 class="subtitle add-center__subtitle">Количество:</h4>
-						<div class="stepper" data-max="10">
-							<button class="stepper__minus">
-								<svg width="39.000000" height="39.000000" viewBox="0 0 39 39" xmlns="http://www.w3.org/2000/svg">
-									<g clip-path="url(#clip25_442)">
-										<path id="path" d="M29.25 21.12L9.75 21.12C8.85 21.12 8.12 20.39 8.12 19.49C8.12 18.6 8.85 17.87 9.75 17.87L29.25 17.87C30.14 17.87 30.87 18.6 30.87 19.49C30.87 20.39 30.14 21.12 29.25 21.12Z" fill-opacity="1.000000" fill-rule="nonzero"/>
-									</g>
-								</svg>
-							</button>
-							<div class="stepper__value">1</div>
-							<button class="stepper__plus">
-								<svg width="39.000000" height="39.000000" viewBox="0 0 39 39" xmlns="http://www.w3.org/2000/svg">
-									<g clip-path="url(#clip25_440)">
-										<path id="path" d="M19.5 30.87C18.6 30.87 17.87 30.14 17.87 29.24L17.87 21.12L9.75 21.12C8.85 21.12 8.12 20.39 8.12 19.49C8.12 18.6 8.85 17.87 9.75 17.87L17.87 17.87L17.87 9.74C17.87 8.85 18.6 8.12 19.5 8.12C20.39 8.12 21.12 8.85 21.12 9.74L21.12 17.87L29.25 17.87C30.14 17.87 30.87 18.6 30.87 19.49C30.87 20.39 30.14 21.12 29.25 21.12L21.12 21.12L21.12 29.24C21.12 30.14 20.39 30.87 19.5 30.87Z" fill-opacity="1.000000" fill-rule="nonzero"/>
-									</g>
-								</svg>
-							</button>
-						</div>
-					</div>
-					<div class="subtitle">Дополнительные характеристики
-						(появляются после добавления)</div>
-					<div class="add-center__properties" id="properties_list">
-
-					</div>
-				</div>
-				<button class="btn btn-big">Добавить товар</button>
-			</div>
-<!--			-->
-			<div class="add-edit__right add-right grey_background">
-				<div class="subtitle">Выберите обязательные поля</div>
-				<div class="add-right__choices">
-					<div class="add-right__choice">
-						<div class="add-right__choice-title">Сокет (разъем на плате)</div>
-						<div class="choice choice-grid">
-							<button class="choice__elem active" data-value="LGA 1151">LGA 1151</button>
-							<button class="choice__elem" data-value="LGA 1151 v2">LGA 1151 v2</button>
-							<button class="choice__elem" data-value="LGA 1200">LGA 1200</button>
-							<button class="choice__elem" data-value="LGA 1700">LGA 1700</button>
-							<button class="choice__elem" data-value="AM4">AM4</button>
-							<button class="choice__elem" data-value="AM5">AM5</button>
-						</div>
-					</div>
-					<div class="add-right__choice">
-						<div class="add-right__choice-title">Количество слотов ОЗУ</div>
-						<div class="choice choice-grid">
-							<button class="choice__elem active" data-value="2">2 слота</button>
-							<button class="choice__elem" data-value="4">4 слота</button>
-						</div>
-					</div>
-
-
-					<div class="add-right__choice">
-						<div class="add-right__choice-title">Тип памяти</div>
-						<div class="choice choice-grid">
-							<button class="choice__elem active" data-value="DDR4">DDR4</button>
-							<button class="choice__elem" data-value="DDR5">DDR5</button>
+						<div class="choice" id="sort_in">
+							<button class="choice__elem choice__elem-wide active" data-value="to up">По возрастанию</button>
+							<button class="choice__elem choice__elem-wide" data-value="to down">По убыванию</button>
 						</div>
 					</div>
 				</div>
-				<div class="subtitle">Добавьте еще несколько характеристик</div>
-				<div class="input" id="property_name">
-					<input class="input__text" type="text" placeholder="">
-					<span>Название хар-ки</span>
+				<div class="components__cards cards" id="cards_place">
+ 
 				</div>
-				<div class="input" id="property_value">
-					<input class="input__text" type="text" placeholder="">
-					<span>Характеристика</span>
-				</div>
-				<button class="btn" id="property_btn">Добавить хар-ку</button>
 			</div>
 		</div>
 	</div>
 </section>
-
 </body>
 </html>

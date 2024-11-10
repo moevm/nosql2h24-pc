@@ -6,11 +6,14 @@ import * as dartSass from 'sass';
 import gulpSass from 'gulp-sass';
 const sass = gulpSass(dartSass);
 
-const publicPath = "_public/";
 const srcPath = "src/";
 import sassGlob from 'gulp-sass-glob';
 import newer from "gulp-newer";
 import {deleteAsync} from "del";
+
+const isProduction = false;
+
+const publicPath = isProduction? "dist/" : "_public/";
 
 const path = {
 	build: {
@@ -95,4 +98,9 @@ const dev = gulp.series(
 	gulp.parallel(watch, server)
 )
 
-export default dev;
+const production = gulp.series(
+	clear,
+	gulp.parallel(html, scss, js, img, font)
+)
+
+export default isProduction? production : dev;
