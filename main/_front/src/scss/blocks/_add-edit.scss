@@ -1,0 +1,25 @@
+.add-edit {
+	margin-bottom: 20px;
+}
+
+.add-edit__inner {
+	display: flex;
+	justify-content: space-between;
+}
+
+.add-edit__choice {
+	width: 276px;
+	padding: 20px;
+}
+
+.add-edit__choice-subtitle {
+	margin-bottom: 20px;
+}
+
+.add-edit__center {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	row-gap: 20px;
+}
