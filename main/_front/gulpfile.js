@@ -11,7 +11,7 @@ import sassGlob from 'gulp-sass-glob';
 import newer from "gulp-newer";
 import {deleteAsync} from "del";
 
-const isProduction = false;
+const isProduction = true;
 
 const publicPath = isProduction? "dist/" : "_public/";
 
@@ -62,7 +62,7 @@ export const js = () => {
 }
 
 export const clear = () => {
-	return deleteAsync("./_public");
+	return deleteAsync(isProduction ? "dist" : "./_public");
 }
 
 export const img = () => {

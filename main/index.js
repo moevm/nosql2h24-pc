@@ -7,7 +7,7 @@ import {addComponent, getAll, getOne} from "./controllers/ComponentsController.j
 import path from 'path';
 const app = express();
 
-const isProduction = false;
+const isProduction = true;
 const folder = isProduction? "dist": "_public";
 
 const PORT = 4444;
@@ -28,7 +28,6 @@ app.use(express.static(__dirname + `/_front/${folder}`));
 
 
 app.get('/', (req, res) => {
-	console.log(path.join(__dirname + `/_front/${folder}/components.html`));
 	res.sendFile(path.join(__dirname + `/_front/${folder}/components.html`));
 });
 
@@ -49,7 +48,7 @@ app.get('/components', getAll)
 app.get('/components/:id', getOne);
 app.get('/auth/authorized', checkAuth, (req, res) => {
 	res.json({
-		message: "Вы авторизованы"
+		message: true
 	})
 });
 
