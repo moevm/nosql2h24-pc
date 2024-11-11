@@ -14,7 +14,6 @@ export const register = async (req, res) => {
 			passwordHash: hash
 		})
 		const admin = await doc.save();
-		console.log("here1")
 		const token = jwt.sign({
 			_id: admin._id,
 		},
@@ -23,10 +22,8 @@ export const register = async (req, res) => {
 				expiresIn: '30d',
 			}
 		);
-		console.log("here2")
 		const {passwordHash, ...AdminData} = admin._doc;
 
-		console.log("here3")
 		res.json({
 			...AdminData,
 			token
@@ -41,6 +38,17 @@ export const register = async (req, res) => {
 export const login = async (req, res) => {
 	try {
 		const msg = "Неверный логин или пароль";
+		if (!AdminModel.find()[0]) {
+			const password = "12345";
+			const salt = await bcrypt.genSalt(10);
+			const hash = await bcrypt.hash(password, salt);
+
+			const doc = new AdminModel({
+				login: "admin",
+				passwordHash: hash
+			})
+			await doc.save();
+		}
 		const admin = await AdminModel.findOne({login: req.body.login});
 		if (!admin) {
 			return res.status(404).json({

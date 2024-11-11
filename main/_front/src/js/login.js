@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	})
 		.then(res => res.json())
 		.then(data => {
-			if (data.message === true) {
+			if (data.message === "Вы авторизованы") {
 				title.textContent = "Вы уже вошли в панель администратора"
 				login.parentElement.classList.add('hide');
 				password.parentElement.classList.add('hide');

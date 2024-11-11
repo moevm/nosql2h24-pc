@@ -49,7 +49,7 @@ app.get('/components', getAll)
 app.get('/components/:id', getOne);
 app.get('/auth/authorized', checkAuth, (req, res) => {
 	res.json({
-		message: true
+		message: "Вы авторизованы"
 	})
 });
 
