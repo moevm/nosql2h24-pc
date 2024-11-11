@@ -9,4 +9,5 @@ npm run build
 Ссылка на скринкаст: https://drive.google.com/file/d/1uJQPVvcAIm0N4QOS4tOe5VBqx27nfeMx/view?usp=sharing
 
 Для входа использовать логин(почту): admin
+
 пароль: 12345
