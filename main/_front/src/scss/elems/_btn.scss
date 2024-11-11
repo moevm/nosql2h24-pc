@@ -5,13 +5,14 @@
 	background: $primary;
 	font-size: 18px;
 	line-height: 21px;
-	color: white;
+	color: #fff;
 	font-weight: bold;
 	text-decoration: none;
 	border-radius: 8px;
 	min-width: 190px;
 	border: 1px solid $primary;
 	padding: 12px;
+	text-align: center;
 	transition: background-color 0.2s ease, color 0.2s ease, opacity 0.2s ease;
 	&-big {
 		min-width: 275px;
@@ -25,8 +26,20 @@
 
 	&:disabled {
 		background: $primary;
-		color: white;
+		color: #fff;
 		opacity: 0.4;
 		cursor: not-allowed;
+	}
+	&-red {
+		background-color: #DC3545;
+		border: 1px solid #DC3545;
+		&:hover {
+			background-color: #fff;
+			color: #DC3545;
+		}
+		&:disabled {
+			background-color: #DC3545;
+			color: #fff;
+		}
 	}
 }

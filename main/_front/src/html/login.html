@@ -63,9 +63,9 @@
         <h1 class="title__text">Вход в панель администратора</h1>
     </div>
 </section>
-<section class="form">
+<section class="form hide">
     <div class="form__inner grey_background">
-        <h3 class="form__title">Вход</h3>
+        <h3 class="form__title" id="title">Вход</h3>
         <div class="form__input input" id="login">
             <input class="input__text" type="email" placeholder="">
             <span>Почта</span>
@@ -74,7 +74,9 @@
             <input class="input__text" type="password" placeholder="">
             <span>Пароль</span>
         </div>
+        <div id="form-not-true" class="form__not_true hide">Неверный логин или пароль</div>
         <button class="btn" id="submit">Войти</button>
+        <button class="btn hide" id="logout">Выйти</button>
     </div>
 </section>
 </body>
