@@ -20,7 +20,7 @@
 				<h2 class="header__title">Пора Cобрать ПК</h2>
 			</div>
 			<div class="header__nav">
-				<a href="#!" class="header__link active">Комплектующие</a>
+				<a href="/" class="header__link active">Комплектующие</a>
 				<a href="#!" class="header__link">Конфигуратор</a>
 				<a href="#!" class="header__link">Готовые сборки</a>
 				<a href="#!" class="header__link">
@@ -41,7 +41,7 @@
 						</g>
 					</svg>
 				</a>
-				<a href="login.html" class="header__link">
+				<a href="login" class="header__link">
 					<svg viewBox="0 0 40 40" width="40.000000" height="40.000000">
 						<g clip-path="url(#clip2_8)">
 							<path id="path"
@@ -67,7 +67,7 @@
 		<div class="add-edit__inner">
 			<div class="add-edit__choice grey_background">
 				<h4 class="add-edit__choice-subtitle subtitle">Выберите<br/>тип продукта</h4>
-				<div class="choice choice-grid">
+				<div class="choice choice-grid" id="type">
 					<button class="choice__elem choice__elem-with_img active" data-value="cpu">
 						<svg width="40.000000" height="40.000000" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
 							<g clip-path="url(#clip2_90)">
@@ -204,18 +204,18 @@
 				<div class="add-center grey_background">
 
 					<div class="subtitle">Введите название продукта</div>
-					<div class="add-center__input input">
+					<div class="add-center__input input" id="name">
 						<input class="input__text" type="text" placeholder="">
 						<span>Название</span>
 					</div>
 					<div class="add-center__price">
 						<div class="subtitle">Введите цену:</div>
-						<div class="input">
+						<div class="input" id="price">
 							<input class="input__text" type="number" placeholder="" min="1" max="9999999">
 							<span>Цена</span>
 						</div>
 					</div>
-					<div class="add-center__count">
+					<div class="add-center__count" id="count">
 						<h4 class="subtitle add-center__subtitle">Количество:</h4>
 						<div class="stepper" data-max="10">
 							<button class="stepper__minus">
@@ -241,13 +241,13 @@
 
 					</div>
 				</div>
-				<button class="btn btn-big">Добавить товар</button>
+				<button class="btn btn-big" id="submit">Добавить товар</button>
 			</div>
 <!--			-->
 			<div class="add-edit__right add-right grey_background">
-				<div class="subtitle">Выберите обязательные поля</div>
-				<div class="add-right__choices">
-					<div class="add-right__choice">
+				<div class="subtitle" id="main_properties_title">Выберите обязательные поля</div>
+				<div class="add-right__choices" id="main_properties">
+					<div class="add-right__choice" id="socket">
 						<div class="add-right__choice-title">Сокет (разъем на плате)</div>
 						<div class="choice choice-grid">
 							<button class="choice__elem active" data-value="LGA 1151">LGA 1151</button>
@@ -258,16 +258,14 @@
 							<button class="choice__elem" data-value="AM5">AM5</button>
 						</div>
 					</div>
-					<div class="add-right__choice">
+					<div class="add-right__choice" id="ram_count">
 						<div class="add-right__choice-title">Количество слотов ОЗУ</div>
 						<div class="choice choice-grid">
 							<button class="choice__elem active" data-value="2">2 слота</button>
 							<button class="choice__elem" data-value="4">4 слота</button>
 						</div>
 					</div>
-
-
-					<div class="add-right__choice">
+					<div class="add-right__choice" id="ram_type">
 						<div class="add-right__choice-title">Тип памяти</div>
 						<div class="choice choice-grid">
 							<button class="choice__elem active" data-value="DDR4">DDR4</button>

@@ -7,7 +7,7 @@ import {addComponent, getAll, getOne} from "./controllers/ComponentsController.j
 import path from 'path';
 const app = express();
 
-const isProduction = false;
+const isProduction = true;
 const folder = isProduction? "dist": "_public";
 
 const PORT = 4444;
@@ -28,7 +28,6 @@ app.use(express.static(__dirname + `/_front/${folder}`));
 
 
 app.get('/', (req, res) => {
-	console.log(path.join(__dirname + `/_front/${folder}/components.html`));
 	res.sendFile(path.join(__dirname + `/_front/${folder}/components.html`));
 });
 
@@ -36,16 +35,22 @@ app.get('/login', (req, res) =>  {
 	res.sendFile(path.join(__dirname + `/_front/${folder}/login.html`));
 });
 
+app.get('/add-edit', (req, res) => {
+	res.sendFile(path.join(__dirname + `/_front/${folder}/add-edit.html`))
+})
+
 app.post('/auth/register', register);
 app.post('/auth/login', login);
-
-
 
 
 app.post('/components', checkAuth, addComponent)
 app.get('/components', getAll)
 app.get('/components/:id', getOne);
-
+app.get('/auth/authorized', checkAuth, (req, res) => {
+	res.json({
+		message: true
+	})
+});
 
 app.listen(PORT, (err) => {
 	if (err) {
