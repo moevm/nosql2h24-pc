@@ -13,6 +13,7 @@
 	border: 1px solid $primary;
 	padding: 12px;
 	text-align: center;
+	cursor: pointer;
 	transition: background-color 0.2s ease, color 0.2s ease, opacity 0.2s ease;
 	&-big {
 		min-width: 275px;

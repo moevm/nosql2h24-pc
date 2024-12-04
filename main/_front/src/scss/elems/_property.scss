@@ -4,9 +4,10 @@
 	text-align: left;
 	background-color: #EDEDED;
 	border-radius: 10px;
+	width: 320px;
 	&-with-delete {
 		display: flex;
-
+		width: auto;
 	}
 }
 
