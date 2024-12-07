@@ -22,16 +22,17 @@ choiceLists.forEach((choiceList) => {
 })
  
 const cards_place = document.querySelector("#cards_place");
-
+ 
 let isAdmin = false;
-
+ 
 const addCards = () => {
 	fetch("http://localhost:4444/components")
 		.then(res => res.json())
 		.then(data => {
+			console.log(data);
 			data.forEach((item) => {
 				cards_place.insertAdjacentHTML("beforeend", `
-				<div class="card">
+				<div class="card" data-id="${item._id}">
 					<img src="https://via.placeholder.com/200x200" alt="">
 					<div class="card__description">
 						<div class="card__name">${item.name}</div>
@@ -42,10 +43,20 @@ const addCards = () => {
 				</div>
 				`)
 			})
+			console.log("here")
+			const card__buttons = document.querySelectorAll(".card__button");
+			card__buttons.forEach((card_button) => {
+				card_button.addEventListener("click",(e) => {
+					const id = card_button.parentElement.parentElement.dataset.id
+					if (!isAdmin) {
+						window.location.href = (`http://localhost:4444/?id=${id}`)
+					}
+				})
+			})
 		})
 }
 const btn_add = document.querySelector("#add");
-
+ 
 document.addEventListener("DOMContentLoaded", function() {
 	fetch('http://localhost:4444/auth/authorized', {
 		method: 'GET',
@@ -63,4 +74,3 @@ document.addEventListener("DOMContentLoaded", function() {
 			addCards();
 		})
 })
-

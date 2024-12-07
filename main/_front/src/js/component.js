@@ -2,9 +2,14 @@ const name = document.querySelector("#name")
 const type = document.querySelector("#type")
 const properties = document.querySelector("#properties")
 const price = document.querySelector("#price")
-console.log(properties);
+// console.log(properties);
+ 
+let href = window.location.href
+let query_id = href.split('/').pop();
+let id = query_id.split('=').pop();
+console.log(id);
 const fetchComponent = () => {
-	fetch("http://localhost:4444/components/6732325e90454c580db794bd")
+	fetch(`http://localhost:4444/components/${id}/`)
 		.then(res => res.json())
 		.then(data => {
 			console.log(data);
@@ -58,3 +63,4 @@ const fetchComponent = () => {
 }
  
 fetchComponent()
+ 
