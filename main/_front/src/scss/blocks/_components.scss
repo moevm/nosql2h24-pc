@@ -1,14 +1,14 @@
 .components {
-
+	margin-bottom: 20px;
 }
-
+ 
 .components__inner {
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-start;
 	column-gap: 20px;
 }
-
+ 
 .components__choice {
 	width: 276px;
 	padding: 20px;
@@ -16,18 +16,18 @@
 	flex-direction: column;
 	gap: 15px;
 }
-
+ 
 .components__choice-title {
 	font-size: 24px;
 	line-height: 28px;
 	font-weight: 700;
 	text-align: center;
 }
-
+ 
 .components__main {
 	flex: 1;
 }
-
+ 
 .components__sort {
 	margin-bottom: 20px;
 }
