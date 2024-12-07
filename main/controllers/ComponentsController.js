@@ -1,5 +1,5 @@
 import ComponentsModel from "../models/Components.js";
-
+ 
 export const addComponent = async (req, res) => {
 	try {
 		const components = await ComponentsModel.find({name: req.body.name});
@@ -27,10 +27,16 @@ export const addComponent = async (req, res) => {
 		})
 	}
 }
-
+ 
 export const getAll = async (req, res) => {
 	try {
-		const components = await ComponentsModel.find().exec();
+		console.log(req.query);
+		let components;
+		if (req.query.type){
+			components = await ComponentsModel.find({type: req.query.type}).exec();
+		}else {
+			components = await ComponentsModel.find().exec();
+		}
 		res.json(components);
 	}catch (err){
 		console.warn(err);
@@ -39,11 +45,11 @@ export const getAll = async (req, res) => {
 		})
 	}
 }
-
+ 
 export const getOne = async (req, res) => {
 	try {
 		const componentId = String(req.params.id);
-
+ 
 		ComponentsModel.findOne({
 			_id: componentId
 		}).then(

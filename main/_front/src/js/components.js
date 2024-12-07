@@ -1,35 +1,16 @@
 const choiceLists = document.querySelectorAll(".choice");
  
-choiceLists.forEach((choiceList) => {
-	const choiceItems = choiceList.querySelectorAll(".choice__elem");
-	choiceItems.forEach((choice) => {
-		if (choice.classList.contains("active")) {
-			choiceList.dataset.value = choice.dataset.value;
-			// console.log(choice.dataset.value);
-		}
-		choice.addEventListener("click", (e) => {
-			choiceItems.forEach((choice) => {
-				if (choice === e.target) {
-					choiceList.dataset.value = choice.dataset.value;
-					choice.classList.add("active");
-					console.log(choice.dataset.value);
-				}else {
-					choice.classList.remove("active");
-				}
-			});
-		});
-	});
-})
+const choice_components = document.querySelector("#choice_components");
  
-const cards_place = document.querySelector("#cards_place");
  
 let isAdmin = false;
  
-const addCards = () => {
-	fetch("http://localhost:4444/components")
+const addCards = (type) => {
+	fetch(`http://localhost:4444/components${type ? "?type=" + type : ""}`)
 		.then(res => res.json())
 		.then(data => {
 			console.log(data);
+			cards_place.replaceChildren();
 			data.forEach((item) => {
 				cards_place.insertAdjacentHTML("beforeend", `
 				<div class="card" data-id="${item._id}">
@@ -43,7 +24,6 @@ const addCards = () => {
 				</div>
 				`)
 			})
-			console.log("here")
 			const card__buttons = document.querySelectorAll(".card__button");
 			card__buttons.forEach((card_button) => {
 				card_button.addEventListener("click",(e) => {
@@ -55,6 +35,33 @@ const addCards = () => {
 			})
 		})
 }
+ 
+choiceLists.forEach((choiceList) => {
+	const choiceItems = choiceList.querySelectorAll(".choice__elem");
+	choiceItems.forEach((choice) => {
+		if (choice.classList.contains("active")) {
+			choiceList.dataset.value = choice.dataset.value;
+			// console.log(choice.dataset.value);
+		}
+		choice.addEventListener("click", (e) => {
+			choiceItems.forEach((choice) => {
+				if (choice === e.target) {
+					choiceList.dataset.value = choice.dataset.value;
+					choice.classList.add("active");
+					console.log(choice.dataset.value);
+					console.log("here");
+					if (choiceList.id === "choice_components") {
+						addCards(choice.dataset.value)
+					}
+				}else {
+					choice.classList.remove("active");
+				}
+			});
+		});
+	});
+})
+ 
+ 
 const btn_add = document.querySelector("#add");
  
 document.addEventListener("DOMContentLoaded", function() {
@@ -71,6 +78,6 @@ document.addEventListener("DOMContentLoaded", function() {
 				isAdmin = true;
 				btn_add.parentElement.classList.remove('hide');
 			}
-			addCards();
+			addCards("cpu");
 		})
 })
