@@ -120,3 +120,24 @@ export const update = async (req, res) => {
 		})
 	}
 }
+ 
+export const deleteElem = async (req, res) => {
+	try {
+		const componentId = String(req.params.id);
+		await ComponentsModel.deleteOne({_id: componentId})
+			.then(() => {
+				res.json({success: true});
+			})
+			.catch((e) => {
+				console.warn(e);
+				res.json({
+					message: "Не удалось удалить компонент"
+				});
+			});
+	}catch (e) {
+		console.warn(e);
+		res.json({
+			message: "Не удалось удалить компонент"
+		});
+	}
+}
