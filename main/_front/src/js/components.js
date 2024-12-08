@@ -1,10 +1,10 @@
 const choiceLists = document.querySelectorAll(".choice");
- 
+
 const choice_components = document.querySelector("#choice_components");
- 
- 
+
+
 let isAdmin = false;
- 
+
 const addCards = (type) => {
 	fetch(`http://localhost:4444/components${type ? "?type=" + type : ""}`)
 		.then(res => res.json())
@@ -30,12 +30,14 @@ const addCards = (type) => {
 					const id = card_button.parentElement.parentElement.dataset.id
 					if (!isAdmin) {
 						window.location.href = (`http://localhost:4444/?id=${id}`)
+					}else {
+						window.location.href = (`http://localhost:4444/add-edit?id=${id}`)
 					}
 				})
 			})
 		})
 }
- 
+
 choiceLists.forEach((choiceList) => {
 	const choiceItems = choiceList.querySelectorAll(".choice__elem");
 	choiceItems.forEach((choice) => {
@@ -60,10 +62,10 @@ choiceLists.forEach((choiceList) => {
 		});
 	});
 })
- 
- 
+
+
 const btn_add = document.querySelector("#add");
- 
+
 document.addEventListener("DOMContentLoaded", function() {
 	fetch('http://localhost:4444/auth/authorized', {
 		method: 'GET',

@@ -7,7 +7,7 @@ import {addComponent, getAll, getOne, update} from "./controllers/ComponentsCont
 import path from 'path';
 const app = express();
  
-const isProduction = false;
+const isProduction = true;
 const folder = isProduction? "dist": "_public";
  
 const PORT = 4444;
