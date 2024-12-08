@@ -6,8 +6,9 @@
 	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link rel="stylesheet" href="css/style.css">
+	<script src="./js/component.js" defer></script>
 	<title>Document</title>
-
+ 
 </head>
 <body>
 <header class="header">
@@ -18,7 +19,7 @@
 				<h2 class="header__title">Пора Cобрать ПК</h2>
 			</div>
 			<div class="header__nav">
-				<a href="/" class="header__link active">Комплектующие</a>
+				<a href="/" class="header__link">Комплектующие</a>
 				<a href="#!" class="header__link">Конфигуратор</a>
 				<a href="#!" class="header__link">Готовые сборки</a>
 				<a href="#!" class="header__link">
@@ -57,7 +58,10 @@
 </header>
 <section class="title">
 	<div class="container">
-		<h1 class="title__text">AMD Ryzen 5 2600</h1>
+		<h1 class="title__text">
+			<span id="type"><!-- Сюда вставится текст после запроса	--></span>
+			<span id="name"><!-- Сюда вставится текст после запроса	--></span>
+		</h1>
 	</div>
 </section>
 <section class="info">
@@ -68,70 +72,11 @@
 			</div>
 			<div class="info__block">
 				<div class="subtitle info__title">Характеристики:</div>
-				<div class="info__properties">
-					<div class="property">
-						<div class="property__text">
-							<div class="property__name">Сокет (разьем на мат плате)</div>
-							<div class="property__value">AM4</div>
-						</div>
-					</div>
-					<div class="property">
-						<div class="property__text">
-							<div class="property__name">Количество ядер / потоков</div>
-							<div class="property__value">6 ядер / 12 потоков</div>
-						</div>
-					</div>
-					<div class="property">
-						<div class="property__text">
-							<div class="property__name">Базовая / макс частота</div>
-							<div class="property__value">3.4GHz / 3.9GHz</div>
-						</div>
-					</div>
-					<div class="property">
-						<div class="property__text">
-							<div class="property__name">Разблокирован множитель</div>
-							<div class="property__value">Да</div>
-						</div>
-					</div>
-					<div class="property">
-						<div class="property__text">
-							<div class="property__name">TDP</div>
-							<div class="property__value">65W</div>
-						</div>
-					</div>
-					<div class="property">
-						<div class="property__text">
-							<div class="property__name">Наличие встроенной графики</div>
-							<div class="property__value">Нет</div>
-						</div>
-					</div>
-					<div class="property">
-						<div class="property__text">
-							<div class="property__name">Стандарт памяти</div>
-							<div class="property__value">DDR4</div>
-						</div>
-					</div>
-					<div class="property">
-						<div class="property__text">
-							<div class="property__name">Лучшая технология разгона</div>
-							<div class="property__value">Нет</div>
-						</div>
-					</div>
-					<div class="property">
-						<div class="property__text">
-							<div class="property__name">Техпроцесс</div>
-							<div class="property__value">12 нм</div>
-						</div>
-					</div>
-					<div class="property">
-						<div class="property__text">
-							<div class="property__name">Поколение (архитектура), год</div>
-							<div class="property__value">2000 (Zen+), 2018 год</div>
-						</div>
-					</div>
+				<div class="info__properties" id="properties">
+					<!--		Сюда вставятся свойства после запроса			-->
 				</div>
 				<div class="info__down">
-					<div class="info__price">8 500 ₽</div>
+					<div class="info__price" id="price"></div>
 					<button class="info__btn btn btn-big">Купить</button>
 				</div>
 			</div>

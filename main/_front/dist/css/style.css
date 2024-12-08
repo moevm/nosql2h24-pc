@@ -623,6 +623,10 @@ body {
   margin-bottom: 16px;
 }
 
+.components {
+  margin-bottom: 20px;
+}
+
 .components__inner {
   display: flex;
   justify-content: space-between;
