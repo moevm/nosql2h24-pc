@@ -2,6 +2,54 @@ const choiceLists = document.querySelectorAll(".choice");
 
 const choice_components = document.querySelector("#choice_components");
 
+const dialog_delete = document.querySelector("#delete");
+
+const btn_yes = document.querySelector("#dialog_yes");
+const btn_no = document.querySelector("#dialog_no");
+
+let global_id_for_dialog;
+
+
+const yes_event_handler = (e) => {
+	fetch(`http://localhost:4444/components/${global_id_for_dialog}`,{
+		method: "DELETE",
+		headers: {
+			'Authorization': 'Bearer ' + localStorage.getItem('authToken'),
+			'Content-Type': 'application/json'
+		}
+	})
+		.then(res => res.json())
+		.then(data => {
+			if (!data.message) {
+				window.location.reload();
+			}else {
+				closeDialog();
+			}
+		})
+}
+
+const no_event_handler = (e) => {
+	closeDialog();
+}
+const closeDialog = () => {
+	dialog_delete.classList.remove('show');
+	document.body.classList.remove('no-scroll')
+	btn_yes.removeEventListener("click", yes_event_handler)
+	btn_no.removeEventListener("click", no_event_handler)
+}
+
+const openDialog = (name, id) => {
+	global_id_for_dialog = id
+	dialog_delete.classList.add('show');
+	document.body.classList.add('no-scroll')
+	const dialog_name = dialog_delete.querySelector(".dialog__name");
+	console.log(dialog_name)
+	dialog_name.textContent = name;
+	btn_yes.addEventListener("click", yes_event_handler)
+	btn_no.addEventListener("click", no_event_handler)
+}
+
+
 
 let isAdmin = false;
 
@@ -28,10 +76,15 @@ const addCards = (type) => {
 			card__buttons.forEach((card_button) => {
 				card_button.addEventListener("click",(e) => {
 					const id = card_button.parentElement.parentElement.dataset.id
+					const name = card_button.parentElement.parentElement.querySelector(".card__name").textContent
 					if (!isAdmin) {
 						window.location.href = (`http://localhost:4444/?id=${id}`)
 					}else {
-						window.location.href = (`http://localhost:4444/add-edit?id=${id}`)
+						if (card_button.classList.contains("btn-red")){
+							openDialog(name, id)
+						}else{
+							window.location.href = (`http://localhost:4444/add-edit?id=${id}`)
+						}
 					}
 				})
 			})
@@ -83,3 +136,4 @@ document.addEventListener("DOMContentLoaded", function() {
 			addCards("cpu");
 		})
 })
+
