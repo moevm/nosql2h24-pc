@@ -9,10 +9,21 @@
 	<title>Document</title>
 	<link rel="stylesheet" href="../scss/style.scss">
 	<script src="../js/components.js" defer></script>
- 
+
 </head>
 <body>
- 
+
+<div class="dialog" id="delete">
+	<div class="dialog__inner">
+		<div class="dialog__name">AMD Ryzen 5 1400</div>
+		<div class="dialog__text">Вы действительно хотите удалить?</div>
+		<div class="dialog__buttons">
+			<button class="btn btn-red" id="dialog_yes">Да</button>
+			<button class="btn" id="dialog_no">Нет</button>
+		</div>
+	</div>
+</div>
+
 <header class="header">
 	<div class="container">
 		<div class="header__inner">
@@ -201,7 +212,7 @@
 				<h3 class="components__choice-title" style="display: none;">Фильтры</h3>
 				<div id="socket" class="checkbox-group" style="display: none;" data-value="socket">
 					<h4 class="checkbox-group__title">Cокет</h4>
- 
+
 					<div class="checkbox" data-value="AM4">
 						<label>
 							<input type="checkbox" class="checkbox-real"/>
@@ -240,7 +251,7 @@
 				</div>
 				<div style="display: flex;justify-content: center;" class="hide">
 					<a href="add-edit" class="btn" id="add">Добавить товар</a>
- 
+
 				</div>
 			</div>
 			<div class="components__main">
@@ -258,11 +269,12 @@
 					</div>
 				</div>
 				<div class="components__cards cards" id="cards_place">
- 
+
 				</div>
 			</div>
 		</div>
 	</div>
 </section>
+
 </body>
 </html>
