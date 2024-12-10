@@ -1,14 +1,14 @@
 import AdminModel from "../models/Admin.js";
-
+ 
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
-
+ 
 export const register = async (req, res) => {
 	try {
 		const password = req.body.password;
 		const salt = await bcrypt.genSalt(10);
 		const hash = await bcrypt.hash(password, salt);
-
+ 
 		const doc = new AdminModel({
 			login: req.body.login,
 			passwordHash: hash
@@ -23,7 +23,7 @@ export const register = async (req, res) => {
 			}
 		);
 		const {passwordHash, ...AdminData} = admin._doc;
-
+ 
 		res.json({
 			...AdminData,
 			token
@@ -34,21 +34,31 @@ export const register = async (req, res) => {
 		})
 	}
 }
-
+ 
 export const login = async (req, res) => {
 	try {
 		const msg = "Неверный логин или пароль";
-		if (!AdminModel.find()[0]) {
+		let hasAdmin = true;
+ 
+		await AdminModel.find()
+			.then((docs) => {
+				if (docs.length === 0) {
+					hasAdmin = false;
+				}
+				console.log("first")
+			})
+		if (!hasAdmin) {
 			const password = "12345";
 			const salt = await bcrypt.genSalt(10);
 			const hash = await bcrypt.hash(password, salt);
-
+ 
 			const doc = new AdminModel({
 				login: "admin",
 				passwordHash: hash
 			})
 			await doc.save();
 		}
+		console.log("second")
 		const admin = await AdminModel.findOne({login: req.body.login});
 		if (!admin) {
 			return res.status(404).json({

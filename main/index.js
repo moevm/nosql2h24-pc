@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 import cors from "cors";
 import {login} from "./controllers/AdminController.js";
 import checkAuth from "./utils/checkAuth.js";
-import {addComponent, getAll, getOne, update} from "./controllers/ComponentsController.js";
+import {addComponent, deleteElem, getAll, getOne, update} from "./controllers/ComponentsController.js";
 import path from 'path';
 const app = express();
  
@@ -52,6 +52,7 @@ app.post('/components', checkAuth, addComponent);
 app.get('/components', getAll);
 app.get('/components/:id', getOne);
 app.patch('/components/:id', checkAuth, update);
+app.delete('/components/:id', checkAuth, deleteElem);
 app.get('/auth/authorized', checkAuth, (req, res) => {
 	res.json({
 		message: true
