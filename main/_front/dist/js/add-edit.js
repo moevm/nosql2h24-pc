@@ -22,6 +22,19 @@ if (query_id !== "add-edit"){
 }
 const isReducting = !!id;
 
+const header_nav = document.querySelector("#header_nav");
+
+let isAdmin = false;
+
+const addAdminPanel = () => {
+	// console.log("here");
+	if (isAdmin) {
+		header_nav.insertAdjacentHTML('afterbegin',`
+                <a href="/admin" class="header__link">Панель администратора</a>
+		`)
+	}
+}
+
 
 const switchTypeOf = (type_switch) => {
 	if (type_switch === "cpu") {
@@ -226,6 +239,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		.then(res => res.json())
 		.then(data => {
 			if (data.message === true) {
+				isAdmin = true;
+				addAdminPanel();
 				if (isReducting) {
 					fetch(`http://localhost:4444/components/${id}/`)
 						.then(res => res.json())

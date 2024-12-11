@@ -1,8 +1,4 @@
 import ComponentsModel from "../models/Components.js";
-import path from "path";
-const __dirname = import.meta.dirname;
-import fs from "fs";
-import {Parser} from "json2csv";
 
 export const addComponent = async (req, res) => {
 	try {

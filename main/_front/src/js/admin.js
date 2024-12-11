@@ -4,8 +4,23 @@ const input_file = document.querySelector('#db_file');
 
 let fileAdd = false;
 
+let isAdmin = false;
+
+const addAdminPanel = () => {
+	if (isAdmin) {
+		header_nav.insertAdjacentHTML('afterbegin',`
+                <a href="/admin" class="header__link active">Панель администратора</a>
+		`)
+	}
+}
+
 btn_download.addEventListener('click', (e) => {
-	fetch('http://localhost:4444/components/json')
+	fetch('http://localhost:4444/components/json', {
+		headers: {
+			'Authorization': 'Bearer ' + localStorage.getItem('authToken'),
+			'Content-Type': 'application/json',
+		}
+	})
 		.then(res => {
 			if (!res.ok) {
 				throw new Error("Ошибка при скачивании JSON");
@@ -42,7 +57,8 @@ btn_submit.addEventListener('click', async (e) => {
 				const response = await fetch('http://localhost:4444/components/json',{
 					method: 'POST',
 					headers: {
-						'Content-Type': 'application/json'
+						'Authorization': 'Bearer ' + localStorage.getItem('authToken'),
+						'Content-Type': 'application/json',
 					},
 					body: jsonContent
 				})
@@ -53,4 +69,24 @@ btn_submit.addEventListener('click', async (e) => {
 		}
 		reader.readAsText(file);
 	}
+})
+
+
+document.addEventListener("DOMContentLoaded", function() {
+	fetch('http://localhost:4444/auth/authorized', {
+		method: 'GET',
+		headers: {
+			'Authorization': 'Bearer ' + localStorage.getItem('authToken'),
+			'Content-Type': 'application/json'
+		}
+	})
+		.then(res => res.json())
+		.then(data => {
+			if (data.message === true) {
+				isAdmin = true;
+				addAdminPanel()
+			}else {
+				window.location.replace("/login");
+			}
+		})
 })

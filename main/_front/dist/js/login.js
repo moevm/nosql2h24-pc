@@ -6,6 +6,16 @@ const btn_submit = document.querySelector('#submit');
 const btn_logout = document.querySelector('#logout');
 const form_not_true = document.querySelector('#form-not-true');
 
+let isAdmin = false;
+
+const addAdminPanel = () => {
+	if (isAdmin) {
+		header_nav.insertAdjacentHTML('afterbegin',`
+                <a href="/admin" class="header__link">Панель администратора</a>
+		`)
+	}
+}
+
 btn_submit.addEventListener('click', (e) => {
 	if (login.value !== "" && password.value !== "") {
 		fetch('http://localhost:4444/auth/login', {
@@ -43,6 +53,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		.then(data => {
 			if (data.message === true) {
 				title.textContent = "Вы уже вошли в панель администратора"
+				isAdmin = true;
+				addAdminPanel();
 				login.parentElement.classList.add('hide');
 				password.parentElement.classList.add('hide');
 				btn_submit.classList.add('hide');

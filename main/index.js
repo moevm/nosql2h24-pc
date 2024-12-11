@@ -52,11 +52,15 @@ app.get('/login', (req, res) =>  {
 app.get('/add-edit', (req, res) => {
 	res.sendFile(path.join(__dirname + `/_front/${folder}/add-edit.html`))
 })
- 
+
+app.get('/admin', (req, res) => {
+	res.sendFile(path.join(__dirname + `/_front/${folder}/admin.html`))
+})
+
 app.post('/auth/login', login);
 
-app.get('/components/json',  exportToClient);
-app.post('/components/json', /*checkAuth,*/ importFromClient);
+app.get('/components/json', checkAuth, exportToClient);
+app.post('/components/json', checkAuth, importFromClient);
 app.post('/components', checkAuth, addComponent);
 app.get('/components', getAll);
 app.get('/components/:id', getOne);

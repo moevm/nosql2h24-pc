@@ -9,6 +9,17 @@ const btn_no = document.querySelector("#dialog_no");
 
 let global_id_for_dialog;
 
+const header_nav = document.querySelector("#header_nav");
+
+let isAdmin = false;
+
+const addAdminPanel = () => {
+	if (isAdmin) {
+		header_nav.insertAdjacentHTML('afterbegin',`
+                <a href="/admin" class="header__link">Панель администратора</a>
+		`)
+	}
+}
 
 const yes_event_handler = (e) => {
 	fetch(`http://localhost:4444/components/${global_id_for_dialog}`,{
@@ -49,9 +60,6 @@ const openDialog = (name, id) => {
 	btn_no.addEventListener("click", no_event_handler)
 }
 
-
-
-let isAdmin = false;
 
 const addCards = (type) => {
 	fetch(`http://localhost:4444/components${type ? "?type=" + type : ""}`)
@@ -131,6 +139,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		.then(data => {
 			if (data.message === true) {
 				isAdmin = true;
+				addAdminPanel();
 				btn_add.parentElement.classList.remove('hide');
 			}
 			addCards("cpu");
