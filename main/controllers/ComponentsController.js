@@ -1,5 +1,9 @@
 import ComponentsModel from "../models/Components.js";
- 
+import path from "path";
+const __dirname = import.meta.dirname;
+import fs from "fs";
+import {Parser} from "json2csv";
+
 export const addComponent = async (req, res) => {
 	try {
 		const components = await ComponentsModel.find({name: req.body.name});
@@ -80,7 +84,7 @@ export const getOne = async (req, res) => {
 		})
 	}
 }
- 
+
 export const update = async (req, res) => {
 	try {
 		const componentId = String(req.params.id);
@@ -139,5 +143,64 @@ export const deleteElem = async (req, res) => {
 		res.json({
 			message: "Не удалось удалить компонент"
 		});
+	}
+}
+
+export const exportToClient = async (req, res) => {
+	try {
+		let items;
+		await ComponentsModel.find().lean()
+			.then(value => {
+				console.log(value);
+				items = value;
+			});
+		if (items.length === 0) {
+			return res.status(404).json({
+				message: "Нет данных для экспорта"
+			})
+		}
+
+		// const parser = new Parser();
+		// const csv = parser.parse(items, {delimiter: ";"});
+		// console.log(csv);
+		res.json({
+			components: items
+		})
+	}catch (e) {
+		console.warn(`Ошибка при экспорте данных: ${e}`);
+		res.status(500).json({
+			message: "Ошибка при экспорте данных"
+		});
+	}
+}
+
+export const importFromClient = async (req, res) => {
+	try {
+		console.log(req.body);
+		if (req.body.components){
+			const components = req.body.components;
+			for (const component of components){
+				const component_from_db = await ComponentsModel.find({name: req.body.name});
+				if (!component_from_db[0]){
+					const doc = new ComponentsModel({
+						name: component.name,
+						type: component.type,
+						price: component.price,
+						count: component.count,
+						main_properties: component.main_properties,
+						other_properties: component.other_properties
+					})
+					const post = await doc.save();
+				}
+			}
+		}
+		res.json({
+			message: "Данные получены"
+		})
+	}catch (e) {
+		console.warn(e);
+		res.json({
+			message: `Какая-то ошибка: ${e}`
+		})
 	}
 }

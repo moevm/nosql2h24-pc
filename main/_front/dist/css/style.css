@@ -154,6 +154,10 @@ body.no-scroll {
   color: #fff;
 }
 
+.btn__input {
+  display: none;
+}
+
 .checkbox-group {
   display: flex;
   flex-direction: column;
@@ -696,6 +700,17 @@ body.no-scroll {
 
 .components__sort {
   margin-bottom: 20px;
+}
+
+.db-block__title {
+  text-align: start;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.db-block__btns {
+  display: flex;
+  column-gap: 15px;
 }
 
 .form {

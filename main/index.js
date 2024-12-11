@@ -3,7 +3,15 @@ import mongoose from "mongoose";
 import cors from "cors";
 import {login} from "./controllers/AdminController.js";
 import checkAuth from "./utils/checkAuth.js";
-import {addComponent, deleteElem, getAll, getOne, update} from "./controllers/ComponentsController.js";
+import {
+	addComponent,
+	deleteElem,
+	exportToClient,
+	getAll,
+	getOne,
+	importFromClient,
+	update
+} from "./controllers/ComponentsController.js";
 import path from 'path';
 const app = express();
  
@@ -46,8 +54,9 @@ app.get('/add-edit', (req, res) => {
 })
  
 app.post('/auth/login', login);
- 
- 
+
+app.get('/components/json',  exportToClient);
+app.post('/components/json', /*checkAuth,*/ importFromClient);
 app.post('/components', checkAuth, addComponent);
 app.get('/components', getAll);
 app.get('/components/:id', getOne);
