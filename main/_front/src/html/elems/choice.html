@@ -12,7 +12,7 @@
 <body>
 <div class="section">
     <div class="container">
-<!--     Разумеется, элемент ниже не нужен. Он добавлен для пояснения и разграничений       -->
+        <!--     Разумеется, элемент ниже не нужен. Он добавлен для пояснения и разграничений       -->
         <div style="margin-top: 20px;">Сортировать по показателю</div>
         <div class="choice" id="sort_by">
             <button class="choice__elem active" data-value="price">Цена</button>
@@ -39,7 +39,7 @@
         </div>
         <!--     Разумеется, элемент ниже не нужен. Он добавлен для пояснения и разграничений       -->
         <div style="margin-top: 20px;">Выберите сокет (разъем для процессора на материнской плате)</div>
-        <div class="choice choice-grid" style="width: 236px">
+        <div class="choice choice-grid" style="width: 236px" id="type">
             <button class="choice__elem choice__elem-with_img active" data-value="cpu">
                 <svg width="40.000000" height="40.000000" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip2_90)">
@@ -170,7 +170,10 @@
                 Корпус
             </button>
         </div>
+        <button class="btn" style="margin-top: 20px; margin-left: 300px; margin-bottom: 30px;" id="change_parameter">Изменить параметр</button>
+
     </div>
+
 </div>
 </body>
 </html>
