@@ -19,10 +19,9 @@ const app = express();
  
 const isProduction = true;
 const folder = isProduction? "dist": "_public";
- 
 const PORT = 4444;
 const __dirname = import.meta.dirname;
-mongoose.connect("mongodb://127.0.0.1:27017/build_pc")
+mongoose.connect("mongodb://mongo:27017/build_my_data")
 	.then(() => {
 		console.log('DB ok')
 		const components = ComponentsModel.find()

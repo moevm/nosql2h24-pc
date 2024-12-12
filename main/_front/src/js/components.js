@@ -58,6 +58,7 @@ const yes_event_handler = (e) => {
 				}
 				params["type"] = choice_components.dataset.value;
 				addCards(params);
+				closeDialog();
 			}else {
 				closeDialog();
 			}

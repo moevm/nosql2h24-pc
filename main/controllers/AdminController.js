@@ -47,6 +47,7 @@ export const login = async (req, res) => {
 				}
 				console.log("first")
 			})
+		console.log("here 1")
 		if (!hasAdmin) {
 			const password = "12345";
 			const salt = await bcrypt.genSalt(10);
@@ -61,17 +62,22 @@ export const login = async (req, res) => {
 		console.log("second")
 		const admin = await AdminModel.findOne({login: req.body.login});
 		if (!admin) {
+			console.log("third")
 			return res.status(404).json({
 				message: msg
 			})
 		}
 		// Если отсюда убрать await, то, зная логин, можно войти с любым паролем! Лол)
 		const isValidPassword = await bcrypt.compare(req.body.password, admin._doc.passwordHash);
+		console.log("here4")
+		console.log(admin);
 		if (!isValidPassword) {
+			console.log("here5")
 			return res.status(404).json({
 				message: msg
 			})
 		}
+		console.log("here6")
 		const token = jwt.sign({
 			_id: admin._id,
 		},
