@@ -39,7 +39,25 @@ const yes_event_handler = (e) => {
 		.then(res => res.json())
 		.then(data => {
 			if (!data.message) {
-				window.location.reload();
+				// window.location.reload();
+				const params = {};
+				if (filter_name.value.trim() !== ""){
+					params["name"] = filter_name.value.trim();
+				}
+				if (filter_to.value.trim() !== ""){
+					params["max_price"] = filter_to.value;
+				}
+				if (filter_from.value.trim() !== ""){
+					params["min_price"] = filter_from.value;
+				}
+				if (sort_by.dataset.value === "price"){
+					params["sort_by"] = "price"
+				}
+				if (sort_in.dataset.value.trim() !== ""){
+					params["sort_in"] = sort_in.dataset.value;
+				}
+				params["type"] = choice_components.dataset.value;
+				addCards(params);
 			}else {
 				closeDialog();
 			}
@@ -61,7 +79,7 @@ const openDialog = (name, id) => {
 	dialog_delete.classList.add('show');
 	document.body.classList.add('no-scroll')
 	const dialog_name = dialog_delete.querySelector(".dialog__name");
-	console.log(dialog_name)
+	// console.log(dialog_name)
 	dialog_name.textContent = name;
 	btn_yes.addEventListener("click", yes_event_handler)
 	btn_no.addEventListener("click", no_event_handler)
@@ -90,11 +108,11 @@ function createQueryParams(baseUrl, filters) {
 
 const addCards = (filters) => {
 	const query = createQueryParams("http://localhost:4444/components", filters)
-	console.log(query)
+	// console.log(query)
 	fetch(query)
 		.then(res => res.json())
 		.then(data => {
-			console.log(data);
+			// console.log(data);
 			cards_place.replaceChildren();
 			data.forEach((item) => {
 				cards_place.insertAdjacentHTML("beforeend", `
@@ -140,8 +158,8 @@ choiceLists.forEach((choiceList) => {
 				if (choice === e.target) {
 					choiceList.dataset.value = choice.dataset.value;
 					choice.classList.add("active");
-					console.log(choice.dataset.value);
-					console.log("here");
+					// console.log(choice.dataset.value);
+					// console.log("here");
 					if (choiceList.id === "choice_components") {
 						const params = {
 							type: choice.dataset.value

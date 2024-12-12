@@ -52,7 +52,7 @@ btn_submit.addEventListener('click', async (e) => {
 		const reader = new FileReader();
 		reader.onload = async e => {
 			const jsonContent = e.target.result;
-			console.log(jsonContent);
+			// console.log(jsonContent);
 			try {
 				const response = await fetch('http://localhost:4444/components/json',{
 					method: 'POST',
@@ -63,6 +63,8 @@ btn_submit.addEventListener('click', async (e) => {
 					body: jsonContent
 				})
 				console.log(response)
+				alert("Данные успешно загрузились")
+				input_file.value = ""
 			}catch (e) {
 				console.log(`Какая-то ошибка: ${e}`)
 			}

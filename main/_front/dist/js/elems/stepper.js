@@ -56,3 +56,31 @@ steppers.forEach(stepper => {
         }
     })
 })
+
+const stepperChange = (item, value) => {
+    const minus_btn = item.querySelector('.stepper__minus');
+    const plus_btn = item.querySelector('.stepper__plus');
+    const stepper_value = item.querySelector('.stepper__value');
+
+    const max = item.dataset.max;
+    stepper_value.textContent = value;
+
+    if (checkMinDisabled(stepper_value)){
+        minus_btn.disabled = true;
+        stepper_value.textContent = "1";
+    }else {
+        minus_btn.disabled = false;
+    }
+    if (checkMaxDisabled(stepper_value, max)){
+        plus_btn.disabled = true;
+        stepper_value.textContent = max;
+    }else {
+        plus_btn.disabled = false;
+    }
+}
+
+const change_parameter = document.querySelector("#change_parameter");
+console.log(change_parameter);
+change_parameter.addEventListener("click", (e) => {
+    stepperChange(document.querySelector("#type"), 10);
+})
