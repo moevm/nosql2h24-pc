@@ -1,0 +1,27 @@
+version: "3.8"
+
+services:
+  app:
+    container_name: app
+    build:
+      context: ./main
+      dockerfile: Dockerfile
+    depends_on:
+      - db
+    ports:
+      - "127.0.0.1:4444:4444"
+
+  db:
+    container_name: db
+    build:
+      context: ./db
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      - mongo-data:/data/db
+
+
+volumes:
+  mongo-data:
