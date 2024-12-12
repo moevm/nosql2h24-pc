@@ -1,4 +1,5 @@
 import ComponentsModel from "../models/Components.js";
+import components from "../models/Components.js";
 
 export const addComponent = async (req, res) => {
 	try {
@@ -31,12 +32,54 @@ export const addComponent = async (req, res) => {
 export const getAll = async (req, res) => {
 	try {
 		console.log(req.query);
-		let components;
+		const conditions = []
 		if (req.query.type){
-			components = await ComponentsModel.find({type: req.query.type}).exec();
-		}else {
-			components = await ComponentsModel.find().exec();
+			conditions.push({
+				type: req.query.type,
+			});
 		}
+		if (req.query.max_price && req.query.min_price) {
+			conditions.push({
+				price: {$gte: req.query.min_price, $lte: req.query.max_price}
+			});
+		}else if (req.query.min_price) {
+			conditions.push({
+				price: {$gte: req.query.min_price}
+			})
+		}else if (req.query.max_price) {
+			conditions.push({
+				price: {$lte: req.query.max_price}
+			})
+		}
+		if (req.query.name){
+			conditions.push({
+				name: {$regex: new RegExp(req.query.name, "i")},
+			})
+		}
+		const query = conditions.length > 0 ? {$and: conditions} : {}
+		const components = await ComponentsModel.find(query)
+		console.log(components);
+		// let components;
+		// if (req.query.type){
+		// 	components = await ComponentsModel.find({type: req.query.type}).exec();
+		// }else {
+		// 	components = await ComponentsModel.find().exec();
+		// }
+		// const conditions = [];
+		// conditions.push({
+		// 	main_properties: {
+		// 		$elemMatch: {
+		// 			name: "Сокет (разъем на плате)",
+		// 			value: "LGA 1700"
+		// 		}
+		// 	},
+		// })
+		// conditions.push({
+		// 	price: {$gte: 9000, $lte: 18000}
+		// })
+		// const query = conditions.length > 0 ? {$and: conditions} : {}
+		// const components2 = await ComponentsModel.find(query)
+		// console.log(components2);
 		res.json(components);
 	}catch (err){
 		console.warn(err);
