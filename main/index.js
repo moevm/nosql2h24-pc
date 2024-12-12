@@ -13,6 +13,8 @@ import {
 	update
 } from "./controllers/ComponentsController.js";
 import path from 'path';
+import ComponentsModel from "./models/Components.js";
+import * as fs from "node:fs";
 const app = express();
  
 const isProduction = true;
@@ -21,7 +23,29 @@ const folder = isProduction? "dist": "_public";
 const PORT = 4444;
 const __dirname = import.meta.dirname;
 mongoose.connect("mongodb://127.0.0.1:27017/build_pc")
-	.then(() => console.log('DB ok'))
+	.then(() => {
+		console.log('DB ok')
+		const components = ComponentsModel.find()
+		ComponentsModel.find().limit(1)
+			.then(data => {
+				if (data.length === 0){
+					const jsonData = JSON.parse(fs.readFileSync('./utils/data.json', 'utf-8'));
+					const components = jsonData.components;
+					for (const component of components){
+						const doc = new ComponentsModel({
+							name: component.name,
+							type: component.type,
+							price: component.price,
+							count: component.count,
+							main_properties: component.main_properties,
+							other_properties: component.other_properties
+						})
+						doc.save()
+							.then(() => {})
+					}
+				}
+			})
+	})
 	.catch((err) => console.warn('DB error: ', err));
  
 app.use(cors())
