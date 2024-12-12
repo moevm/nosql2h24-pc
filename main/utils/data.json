@@ -1,0 +1,1613 @@
+{
+	"components": [
+		{
+			"name": "Intel Core i3-12100F",
+			"type": "cpu",
+			"price": 6000,
+			"count": 1,
+			"main_properties": [
+				{
+					"name": "Сокет (разъем на плате)",
+					"value": "LGA 1700"
+				}
+			],
+			"other_properties": [
+				{
+					"name": "Количество ядер / потоков",
+					"value": "4 / 8"
+				},
+				{
+					"name": "Частота базовая / макс",
+					"value": "3.3 / 4.3 ГГц"
+				},
+				{
+					"name": "Разблокирован множитель",
+					"value": "Нет"
+				},
+				{
+					"name": "Кеш 3 уровня",
+					"value": "12 МБ"
+				},
+				{
+					"name": "TDP",
+					"value": "65 Вт"
+				},
+				{
+					"name": "Поколение (архитектура), год",
+					"value": "12-е пок (Alder Lake), 2021 год"
+				},
+				{
+					"name": "Техпроцесс",
+					"value": "10 нм"
+				}
+			]
+		},
+		{
+			"name": "Intel Core i5-12400F",
+			"type": "cpu",
+			"price": 9500,
+			"count": 1,
+			"main_properties": [
+				{
+					"name": "Сокет (разъем на плате)",
+					"value": "LGA 1700"
+				}
+			],
+			"other_properties": [
+				{
+					"name": "Количество ядер / потоков",
+					"value": "6 / 12"
+				},
+				{
+					"name": "Частота базовая / макс",
+					"value": "2.5 / 4.4 ГГц"
+				},
+				{
+					"name": "Разблокирован множитель",
+					"value": "Нет"
+				},
+				{
+					"name": "Кеш 3 уровня",
+					"value": "18 МБ"
+				},
+				{
+					"name": "TDP",
+					"value": "65 Вт"
+				},
+				{
+					"name": "Поколение (архитектура), год",
+					"value": "12-е пок (Alder Lake), 2021 год"
+				},
+				{
+					"name": "Техпроцесс",
+					"value": "10 нм"
+				}
+			]
+		},
+		{
+			"name": "Intel Core i5-12600K",
+			"type": "cpu",
+			"price": 14000,
+			"count": 1,
+			"main_properties": [
+				{
+					"name": "Сокет (разъем на плате)",
+					"value": "LGA 1700"
+				}
+			],
+			"other_properties": [
+				{
+					"name": "Количество ядер / потоков",
+					"value": "6P + 4E / 16"
+				},
+				{
+					"name": "Частота P-ядер баз / макс",
+					"value": "3.7 / 4.9 ГГц"
+				},
+				{
+					"name": "Частота E-ядер баз / макс",
+					"value": "2.8 / 3.6 ГГц"
+				},
+				{
+					"name": "Разблокирован множитель",
+					"value": "Да"
+				},
+				{
+					"name": "Кеш 3 уровня",
+					"value": "20 МБ"
+				},
+				{
+					"name": "TDP указанный / реальный",
+					"value": "125 Вт / 150 Вт"
+				},
+				{
+					"name": "Поколение (архитектура), год",
+					"value": "12-е пок (Alder Lake), 2021 год"
+				},
+				{
+					"name": "Техпроцесс",
+					"value": "10 нм"
+				}
+			]
+		},
+		{
+			"name": "Intel Core i7-12700K",
+			"type": "cpu",
+			"price": 21000,
+			"count": 1,
+			"main_properties": [
+				{
+					"name": "Сокет (разъем на плате)",
+					"value": "LGA 1700"
+				}
+			],
+			"other_properties": [
+				{
+					"name": "Количество ядер / потоков",
+					"value": "8P + 4E / 20"
+				},
+				{
+					"name": "Частота P-ядер баз / макс",
+					"value": "3.6 / 5 ГГц"
+				},
+				{
+					"name": "Частота E-ядер баз / макс",
+					"value": "2.7 / 3.8 ГГц"
+				},
+				{
+					"name": "Разблокирован множитель",
+					"value": "Да"
+				},
+				{
+					"name": "Кеш 3 уровня",
+					"value": "25 МБ"
+				},
+				{
+					"name": "TDP указанный / реальный",
+					"value": "125 Вт / 190 Вт"
+				},
+				{
+					"name": "Поколение (архитектура), год",
+					"value": "12-е пок (Alder Lake), 2021 год"
+				},
+				{
+					"name": "Техпроцесс",
+					"value": "10 нм"
+				}
+			]
+		},
+		{
+			"name": "Intel Core i9-12900K",
+			"type": "cpu",
+			"price": 31000,
+			"count": 5,
+			"main_properties": [
+				{
+					"name": "Сокет (разъем на плате)",
+					"value": "LGA 1700"
+				}
+			],
+			"other_properties": [
+				{
+					"name": "Количество ядер / потоков",
+					"value": "8P + 8E / 24"
+				},
+				{
+					"name": "Частота P-ядер баз / макс",
+					"value": "3.2 / 5.2 ГГц"
+				},
+				{
+					"name": "Частота E-ядер баз / макс",
+					"value": "2.4 / 3.9 ГГц"
+				},
+				{
+					"name": "Разблокирован множитель",
+					"value": "Да"
+				},
+				{
+					"name": "Кеш 3 уровня",
+					"value": "30 МБ"
+				},
+				{
+					"name": "TDP указанный / реальный",
+					"value": "125 Вт / 241 Вт"
+				},
+				{
+					"name": "Поколение (архитектура), год",
+					"value": "12-е пок (Alder Lake), 2021 год"
+				},
+				{
+					"name": "Техпроцесс",
+					"value": "10 нм"
+				}
+			]
+		},
+		{
+			"name": "Intel Core i3-10100F",
+			"type": "cpu",
+			"price": 4500,
+			"count": 2,
+			"main_properties": [
+				{
+					"name": "Сокет (разъем на плате)",
+					"value": "LGA 1200"
+				}
+			],
+			"other_properties": [
+				{
+					"name": "Количество ядер / потоков",
+					"value": "4 / 8"
+				},
+				{
+					"name": "Частота базовая / макс",
+					"value": "3.6 / 4.3 ГГц"
+				},
+				{
+					"name": "Разблокирован множитель",
+					"value": "Нет"
+				},
+				{
+					"name": "Кеш 3 уровня",
+					"value": "6 МБ"
+				},
+				{
+					"name": "TDP",
+					"value": "65 Вт"
+				},
+				{
+					"name": "Поколение (архитектура), год",
+					"value": "10-е пок (Comet Lake), 2020 год"
+				},
+				{
+					"name": "Техпроцесс",
+					"value": "14 нм"
+				}
+			]
+		},
+		{
+			"name": "Intel Core i5-10400F",
+			"type": "cpu",
+			"price": 7900,
+			"count": 1,
+			"main_properties": [
+				{
+					"name": "Сокет (разъем на плате)",
+					"value": "LGA 1200"
+				}
+			],
+			"other_properties": [
+				{
+					"name": "Количество ядер / потоков",
+					"value": "6 / 12"
+				},
+				{
+					"name": "Частота базовая / макс",
+					"value": "2.9 / 4.3 ГГц"
+				},
+				{
+					"name": "Разблокирован множитель",
+					"value": "Нет"
+				},
+				{
+					"name": "Кеш 3 уровня",
+					"value": "12 МБ"
+				},
+				{
+					"name": "TDP",
+					"value": "65 Вт"
+				},
+				{
+					"name": "Поколение (архитектура), год",
+					"value": "10-е пок (Comet Lake), 2020 год"
+				},
+				{
+					"name": "Техпроцесс",
+					"value": "14 нм"
+				}
+			]
+		},
+		{
+			"name": "Intel Core i5-10600K",
+			"type": "cpu",
+			"price": 11500,
+			"count": 4,
+			"main_properties": [
+				{
+					"name": "Сокет (разъем на плате)",
+					"value": "LGA 1200"
+				}
+			],
+			"other_properties": [
+				{
+					"name": "Количество ядер / потоков",
+					"value": "6 / 12"
+				},
+				{
+					"name": "Частота базовая / макс",
+					"value": "4.1 / 4.8 ГГц"
+				},
+				{
+					"name": "Разблокирован множитель",
+					"value": "Да"
+				},
+				{
+					"name": "Кеш 3 уровня",
+					"value": "12 МБ"
+				},
+				{
+					"name": "TDP",
+					"value": "125 Вт"
+				},
+				{
+					"name": "Поколение (архитектура), год",
+					"value": "10-е пок (Comet Lake), 2020 год"
+				},
+				{
+					"name": "Техпроцесс",
+					"value": "14 нм"
+				}
+			]
+		},
+		{
+			"name": "Intel Core i7-10700K",
+			"type": "cpu",
+			"price": 16500,
+			"count": 5,
+			"main_properties": [
+				{
+					"name": "Сокет (разъем на плате)",
+					"value": "LGA 1200"
+				}
+			],
+			"other_properties": [
+				{
+					"name": "Количество ядер / потоков",
+					"value": "8 / 16"
+				},
+				{
+					"name": "Частота базовая / макс",
+					"value": "3.8 / 5.1 ГГц"
+				},
+				{
+					"name": "Разблокирован множитель",
+					"value": "Да"
+				},
+				{
+					"name": "Кеш 3 уровня",
+					"value": "16 МБ"
+				},
+				{
+					"name": "TDP",
+					"value": "125 Вт"
+				},
+				{
+					"name": "Поколение (архитектура), год",
+					"value": "10-е пок (Comet Lake), 2020 год"
+				},
+				{
+					"name": "Техпроцесс",
+					"value": "14 нм"
+				}
+			]
+		},
+		{
+			"name": "Intel Core i9-10900K",
+			"type": "cpu",
+			"price": 20500,
+			"count": 1,
+			"main_properties": [
+				{
+					"name": "Сокет (разъем на плате)",
+					"value": "LGA 1200"
+				}
+			],
+			"other_properties": [
+				{
+					"name": "Количество ядер / потоков",
+					"value": "10 / 20"
+				},
+				{
+					"name": "Частота базовая / макс",
+					"value": "3.7 / 5.3 ГГц"
+				},
+				{
+					"name": "Разблокирован множитель",
+					"value": "Да"
+				},
+				{
+					"name": "Кеш 3 уровня",
+					"value": "20 МБ"
+				},
+				{
+					"name": "TDP",
+					"value": "125 Вт"
+				},
+				{
+					"name": "Поколение (архитектура), год",
+					"value": "10-е пок (Comet Lake), 2020 год"
+				},
+				{
+					"name": "Техпроцесс",
+					"value": "14 нм"
+				}
+			]
+		},
+		{
+			"name": "AMD Ryzen 5 5600X",
+			"type": "cpu",
+			"price": 10500,
+			"count": 1,
+			"main_properties": [
+				{
+					"name": "Сокет (разъем на плате)",
+					"value": "AM4"
+				}
+			],
+			"other_properties": [
+				{
+					"name": "Количество ядер / потоков",
+					"value": "6 / 12"
+				},
+				{
+					"name": "Частота базовая / макс",
+					"value": "3.7 / 4.6 ГГц"
+				},
+				{
+					"name": "Разблокирован множитель",
+					"value": "Да"
+				},
+				{
+					"name": "Кеш 3 уровня",
+					"value": "32 МБ"
+				},
+				{
+					"name": "TDP",
+					"value": "65 Вт"
+				},
+				{
+					"name": "Поколение (архитектура), год",
+					"value": "5000 серия (Zen 3), 2020 год"
+				},
+				{
+					"name": "Техпроцесс",
+					"value": "7 нм"
+				}
+			]
+		},
+		{
+			"name": "AMD Ryzen 7 5800X",
+			"type": "cpu",
+			"price": 15000,
+			"count": 1,
+			"main_properties": [
+				{
+					"name": "Сокет (разъем на плате)",
+					"value": "AM4"
+				}
+			],
+			"other_properties": [
+				{
+					"name": "Количество ядер / потоков",
+					"value": "8 / 16"
+				},
+				{
+					"name": "Частота базовая / макс",
+					"value": "3.8 / 4.7 ГГц"
+				},
+				{
+					"name": "TDP",
+					"value": "105 Вт"
+				},
+				{
+					"name": "Разблокирован множитель",
+					"value": "Да"
+				},
+				{
+					"name": "Кеш 3 уровня",
+					"value": "32 МБ"
+				},
+				{
+					"name": "Поколение (архитектура), год",
+					"value": "5000 серия (Zen 3), 2020 год"
+				},
+				{
+					"name": "Техпроцесс",
+					"value": "7 нм"
+				}
+			]
+		},
+		{
+			"name": "AMD Ryzen 7 5800X3D",
+			"type": "cpu",
+			"price": 17000,
+			"count": 3,
+			"main_properties": [
+				{
+					"name": "Сокет (разъем на плате)",
+					"value": "AM4"
+				}
+			],
+			"other_properties": [
+				{
+					"name": "Количество ядер / потоков",
+					"value": "8 / 16"
+				},
+				{
+					"name": "Частота базовая / макс",
+					"value": "3.4 / 4.5 ГГц"
+				},
+				{
+					"name": "TDP",
+					"value": "105 Вт"
+				},
+				{
+					"name": "Разблокирован множитель",
+					"value": "Нет"
+				},
+				{
+					"name": "Кеш 3 уровня",
+					"value": "96 МБ"
+				},
+				{
+					"name": "Поколение (архитектура), год",
+					"value": "5000 серия (Zen 3), 2020 год"
+				},
+				{
+					"name": "Техпроцесс",
+					"value": "7 нм"
+				}
+			]
+		},
+		{
+			"name": "AMD Ryzen 9 5900X",
+			"type": "cpu",
+			"price": 21000,
+			"count": 4,
+			"main_properties": [
+				{
+					"name": "Сокет (разъем на плате)",
+					"value": "AM4"
+				}
+			],
+			"other_properties": [
+				{
+					"name": "Количество ядер / потоков",
+					"value": "12 / 24"
+				},
+				{
+					"name": "Частота базовая / макс",
+					"value": "3.7 / 4.8 ГГц"
+				},
+				{
+					"name": "TDP",
+					"value": "105 Вт"
+				},
+				{
+					"name": "Разблокирован множитель",
+					"value": "Да"
+				},
+				{
+					"name": "Кеш 3 уровня",
+					"value": "64 МБ"
+				},
+				{
+					"name": "Поколение (архитектура), год",
+					"value": "5000 серия (Zen 3), 2020 год"
+				},
+				{
+					"name": "Техпроцесс",
+					"value": "7 нм"
+				}
+			]
+		},
+		{
+			"name": "AMD Ryzen 9 5950X",
+			"type": "cpu",
+			"price": 28000,
+			"count": 1,
+			"main_properties": [
+				{
+					"name": "Сокет (разъем на плате)",
+					"value": "AM4"
+				}
+			],
+			"other_properties": [
+				{
+					"name": "Количество ядер / потоков",
+					"value": "16 / 32"
+				},
+				{
+					"name": "Частота базовая / макс",
+					"value": "3.4 / 4.9 ГГц"
+				},
+				{
+					"name": "TDP",
+					"value": "105 Вт"
+				},
+				{
+					"name": "Разблокирован множитель",
+					"value": "Да"
+				},
+				{
+					"name": "Кеш 3 уровня",
+					"value": "64 МБ"
+				},
+				{
+					"name": "Поколение (архитектура), год",
+					"value": "5000 серия (Zen 3), 2020 год"
+				},
+				{
+					"name": "Техпроцесс",
+					"value": "7 нм"
+				}
+			]
+		},
+		{
+			"name": "AMD Ryzen 5 7500F",
+			"type": "cpu",
+			"price": 11000,
+			"count": 1,
+			"main_properties": [
+				{
+					"name": "Сокет (разъем на плате)",
+					"value": "AM5"
+				}
+			],
+			"other_properties": [
+				{
+					"name": "Количество ядер / потоков",
+					"value": "6 / 12"
+				},
+				{
+					"name": "Частота базовая / макс",
+					"value": "3.7 / 5 ГГц"
+				},
+				{
+					"name": "TDP",
+					"value": "65 Вт"
+				},
+				{
+					"name": "Разблокирован множитель",
+					"value": "Да"
+				},
+				{
+					"name": "Кеш 3 уровня",
+					"value": "32 МБ"
+				},
+				{
+					"name": "Поколение (архитектура), год",
+					"value": "7000 серия (Zen 4), 2023 год"
+				},
+				{
+					"name": "Техпроцесс",
+					"value": "5 нм"
+				}
+			]
+		},
+		{
+			"name": "AMD Ryzen 7 7800X3D",
+			"type": "cpu",
+			"price": 22000,
+			"count": 1,
+			"main_properties": [
+				{
+					"name": "Сокет (разъем на плате)",
+					"value": "AM5"
+				}
+			],
+			"other_properties": [
+				{
+					"name": "Количество ядер / потоков",
+					"value": "8 / 16"
+				},
+				{
+					"name": "Частота базовая / макс",
+					"value": "4.2 / 5 ГГц"
+				},
+				{
+					"name": "Разблокирован множитель",
+					"value": "Нет"
+				},
+				{
+					"name": "TDP",
+					"value": "120 Вт"
+				},
+				{
+					"name": "Кеш 3 уровня",
+					"value": "96 МБ"
+				},
+				{
+					"name": "Поколение (архитектура), год",
+					"value": "7000 серия (Zen 4), 2023 год"
+				},
+				{
+					"name": "Техпроцесс",
+					"value": "5 нм"
+				}
+			]
+		},
+		{
+			"name": "Gigabyte Z490 AORUS XTREME",
+			"type": "motherboard",
+			"price": 25000,
+			"count": 1,
+			"main_properties": [
+				{
+					"name": "Сокет (разъем на плате)",
+					"value": "LGA 1151"
+				},
+				{
+					"name": "Количество слотов ОЗУ",
+					"value": "2"
+				},
+				{
+					"name": "Тип памяти",
+					"value": "DDR4"
+				}
+			],
+			"other_properties": [
+				{
+					"name": "Чипсет",
+					"value": "Z490"
+				},
+				{
+					"name": "Форм-фактор",
+					"value": "EATX"
+				},
+				{
+					"name": "Встроенный Wi-Fi",
+					"value": "Есть, 802.11ax"
+				},
+				{
+					"name": "Макс объем ОЗУ",
+					"value": "128 ГБ"
+				},
+				{
+					"name": "Подсветка",
+					"value": "Есть"
+				}
+			]
+		},
+		{
+			"name": "Asus ROG STRIX Z490-I GAMING",
+			"type": "motherboard",
+			"price": 22000,
+			"count": 1,
+			"main_properties": [
+				{
+					"name": "Сокет (разъем на плате)",
+					"value": "LGA 1200"
+				},
+				{
+					"name": "Количество слотов ОЗУ",
+					"value": "2"
+				},
+				{
+					"name": "Тип памяти",
+					"value": "DDR4"
+				}
+			],
+			"other_properties": [
+				{
+					"name": "Чипсет",
+					"value": "Z490"
+				},
+				{
+					"name": "Форм-фактор",
+					"value": "Mini-ITX"
+				},
+				{
+					"name": "Встроенный Wi-Fi",
+					"value": "Есть, 802.11ax"
+				},
+				{
+					"name": "Макс объем ОЗУ",
+					"value": "64 ГБ"
+				},
+				{
+					"name": "Подсветка",
+					"value": "Есть"
+				}
+			]
+		},
+		{
+			"name": "Gigabyte H410M H V2",
+			"type": "motherboard",
+			"price": 5000,
+			"count": 1,
+			"main_properties": [
+				{
+					"name": "Сокет (разъем на плате)",
+					"value": "LGA 1200"
+				},
+				{
+					"name": "Количество слотов ОЗУ",
+					"value": "2"
+				},
+				{
+					"name": "Тип памяти",
+					"value": "DDR4"
+				}
+			],
+			"other_properties": [
+				{
+					"name": "Чипсет",
+					"value": "H410"
+				},
+				{
+					"name": "Форм-фактор",
+					"value": "Micro-ATX"
+				},
+				{
+					"name": "Встроенный Wi-Fi",
+					"value": "Нет"
+				},
+				{
+					"name": "Макс объем ОЗУ",
+					"value": "64 ГБ"
+				},
+				{
+					"name": "Подсветка",
+					"value": "Нет"
+				}
+			]
+		},
+		{
+			"name": "ASUS ROG MAXIMUS Z690 HERO EVA",
+			"type": "motherboard",
+			"price": 32000,
+			"count": 1,
+			"main_properties": [
+				{
+					"name": "Сокет (разъем на плате)",
+					"value": "LGA 1700"
+				},
+				{
+					"name": "Количество слотов ОЗУ",
+					"value": "4"
+				},
+				{
+					"name": "Тип памяти",
+					"value": "DDR5"
+				}
+			],
+			"other_properties": [
+				{
+					"name": "Чипсет",
+					"value": "Z690"
+				},
+				{
+					"name": "Форм-фактор",
+					"value": "ATX"
+				},
+				{
+					"name": "Встроенный Wi-Fi",
+					"value": "Есть, 802.11ax"
+				},
+				{
+					"name": "Макс объем ОЗУ",
+					"value": "128 ГБ"
+				},
+				{
+					"name": "Подсветка",
+					"value": "Есть"
+				}
+			]
+		},
+		{
+			"name": "ASRock B450 PRO4",
+			"type": "motherboard",
+			"price": 6400,
+			"count": 1,
+			"main_properties": [
+				{
+					"name": "Сокет (разъем на плате)",
+					"value": "AM4"
+				},
+				{
+					"name": "Количество слотов ОЗУ",
+					"value": "4"
+				},
+				{
+					"name": "Тип памяти",
+					"value": "DDR4"
+				}
+			],
+			"other_properties": [
+				{
+					"name": "Чипсет",
+					"value": "B450"
+				},
+				{
+					"name": "Форм-фактор",
+					"value": "ATX"
+				},
+				{
+					"name": "Встроенный Wi-Fi",
+					"value": "Нет"
+				},
+				{
+					"name": "Макс объем ОЗУ",
+					"value": "128 ГБ"
+				},
+				{
+					"name": "Подсветка",
+					"value": "Нет"
+				}
+			]
+		},
+		{
+			"name": "MSI MPG X670E CARBON WIFI",
+			"type": "motherboard",
+			"price": 19000,
+			"count": 2,
+			"main_properties": [
+				{
+					"name": "Сокет (разъем на плате)",
+					"value": "AM5"
+				},
+				{
+					"name": "Количество слотов ОЗУ",
+					"value": "4"
+				},
+				{
+					"name": "Тип памяти",
+					"value": "DDR5"
+				}
+			],
+			"other_properties": [
+				{
+					"name": "Чипсет",
+					"value": "X670"
+				},
+				{
+					"name": "Форм-фактор",
+					"value": "ATX"
+				},
+				{
+					"name": "Встроенный Wi-Fi",
+					"value": "Есть, 802.11ax"
+				},
+				{
+					"name": "Макс объем ОЗУ",
+					"value": "192 ГБ"
+				},
+				{
+					"name": "Подсветка",
+					"value": "Есть"
+				}
+			]
+		},
+		{
+			"name": "ASRock Z790 TAICHI",
+			"type": "motherboard",
+			"price": 28000,
+			"count": 1,
+			"main_properties": [
+				{
+					"name": "Сокет (разъем на плате)",
+					"value": "LGA 1700"
+				},
+				{
+					"name": "Количество слотов ОЗУ",
+					"value": "4"
+				},
+				{
+					"name": "Тип памяти",
+					"value": "DDR5"
+				}
+			],
+			"other_properties": [
+				{
+					"name": "Чипсет",
+					"value": "Z790"
+				},
+				{
+					"name": "Форм-фактор",
+					"value": "EATX"
+				},
+				{
+					"name": "Встроенный Wi-Fi",
+					"value": "Есть, 802.11ax"
+				},
+				{
+					"name": "Макс объем ОЗУ",
+					"value": "192 ГБ"
+				},
+				{
+					"name": "Подсветка",
+					"value": "Есть"
+				}
+			]
+		},
+		{
+			"name": "NVIDIA GeForce RTX 2060 Founders Edition",
+			"type": "gpu",
+			"price": 19000,
+			"count": 2,
+			"main_properties": [],
+			"other_properties": [
+				{
+					"name": "Количество ядер",
+					"value": "1920"
+				},
+				{
+					"name": "Видеопамять, шина",
+					"value": "6 ГБ GDDR6, 192 бита"
+				},
+				{
+					"name": "Интерфейс",
+					"value": "PCIe 3.0 x16"
+				},
+				{
+					"name": "Чип",
+					"value": "TU106"
+				},
+				{
+					"name": "Техпроцесс",
+					"value": "12 нм"
+				},
+				{
+					"name": "Поколение (архитектура), год",
+					"value": "20 серия (Turing), 2019 год"
+				},
+				{
+					"name": "Частота ядра баз / макс",
+					"value": "1365 / 1710 МГц"
+				},
+				{
+					"name": "Поддержка DirectX",
+					"value": "12 Ultimate (12_2)"
+				},
+				{
+					"name": "OpenGL",
+					"value": "4.6"
+				},
+				{
+					"name": "Vulkan",
+					"value": "1.3"
+				},
+				{
+					"name": "Поддержка RT (трассировки лучей)",
+					"value": "Да"
+				}
+			]
+		},
+		{
+			"name": "NVIDIA GeForce RTX 2080 Ti Founders Edition",
+			"type": "gpu",
+			"price": 38000,
+			"count": 1,
+			"main_properties": [],
+			"other_properties": [
+				{
+					"name": "Количество ядер",
+					"value": "4352"
+				},
+				{
+					"name": "Видеопамять, шина",
+					"value": "11 ГБ GDDR6, 352 бита"
+				},
+				{
+					"name": "Интерфейс",
+					"value": "PCIe 3.0 x16"
+				},
+				{
+					"name": "Чип",
+					"value": "TU102"
+				},
+				{
+					"name": "Техпроцесс",
+					"value": "12 нм"
+				},
+				{
+					"name": "Поколение (архитектура), год",
+					"value": "20 серия (Turing), 2019 год"
+				},
+				{
+					"name": "Частота ядра баз / макс",
+					"value": "1350 / 1635 МГц"
+				},
+				{
+					"name": "Поддержка DirectX",
+					"value": "12 Ultimate (12_2)"
+				},
+				{
+					"name": "OpenGL",
+					"value": "4.6"
+				},
+				{
+					"name": "Vulkan",
+					"value": "1.3"
+				},
+				{
+					"name": "Поддержка RT (трассировки лучей)",
+					"value": "Да"
+				}
+			]
+		},
+		{
+			"name": "NVIDIA GeForce RTX 3080 Founders Edition",
+			"type": "gpu",
+			"price": 42000,
+			"count": 1,
+			"main_properties": [],
+			"other_properties": [
+				{
+					"name": "Количество ядер (реальное количество)",
+					"value": "8704 (4352)"
+				},
+				{
+					"name": "Видеопамять, шина",
+					"value": "10 ГБ GDDR6X, 320 бит"
+				},
+				{
+					"name": "Интерфейс",
+					"value": "PCIe 4.0 x16"
+				},
+				{
+					"name": "Техпроцесс",
+					"value": "8 нм"
+				},
+				{
+					"name": "Поколение (архитектура), год",
+					"value": "30 серия (Ampere), 2020 год"
+				},
+				{
+					"name": "Частота ядра баз / макс",
+					"value": "1440 / 1710 МГц"
+				},
+				{
+					"name": "Поддержка DirectX",
+					"value": "12 Ultimate (12_2)"
+				},
+				{
+					"name": "OpenGL",
+					"value": "4.6"
+				},
+				{
+					"name": "Vulkan",
+					"value": "1.3"
+				},
+				{
+					"name": "Поддержка RT (трассировки лучей)",
+					"value": "Да"
+				}
+			]
+		},
+		{
+			"name": "HyperX Fury RGB 8 ГБ DDR4",
+			"type": "ram",
+			"price": 2900,
+			"count": 1,
+			"main_properties": [
+				{
+					"name": "Тип памяти",
+					"value": "DDR4"
+				}
+			],
+			"other_properties": [
+				{
+					"name": "Объем",
+					"value": "8 ГБ"
+				},
+				{
+					"name": "Частота",
+					"value": "3200 МГц"
+				},
+				{
+					"name": "Задержки (latency)",
+					"value": "16-16-16-36"
+				},
+				{
+					"name": "Напряжение",
+					"value": "1.35 В"
+				}
+			]
+		},
+		{
+			"name": "G.Skill Trident Z Neo 8 ГБ DDR4",
+			"type": "ram",
+			"price": 4100,
+			"count": 1,
+			"main_properties": [
+				{
+					"name": "Тип памяти",
+					"value": "DDR4"
+				}
+			],
+			"other_properties": [
+				{
+					"name": "Объем",
+					"value": "8 ГБ"
+				},
+				{
+					"name": "Частота",
+					"value": "3600 МГц"
+				},
+				{
+					"name": "Задержки (latency)",
+					"value": "18-22-22-42"
+				},
+				{
+					"name": "Напряжение",
+					"value": "1.35 В"
+				}
+			]
+		},
+		{
+			"name": "HyperX Fury RGB 16 ГБ DDR4",
+			"type": "ram",
+			"price": 4800,
+			"count": 3,
+			"main_properties": [
+				{
+					"name": "Тип памяти",
+					"value": "DDR4"
+				}
+			],
+			"other_properties": [
+				{
+					"name": "Объем",
+					"value": "16 ГБ"
+				},
+				{
+					"name": "Частота",
+					"value": "3200 МГц"
+				},
+				{
+					"name": "Задержки (latency)",
+					"value": "16-16-16-36"
+				},
+				{
+					"name": "Напряжение",
+					"value": "1.35 В"
+				}
+			]
+		},
+		{
+			"name": "G.SKILL Trident Z5 RGB 16 ГБ DDR5",
+			"type": "ram",
+			"price": 8900,
+			"count": 1,
+			"main_properties": [
+				{
+					"name": "Тип памяти",
+					"value": "DDR5"
+				}
+			],
+			"other_properties": [
+				{
+					"name": "Объем",
+					"value": "16 ГБ"
+				},
+				{
+					"name": "Частота",
+					"value": "6400 МГц"
+				},
+				{
+					"name": "Задержки (latency)",
+					"value": "32-39-39-102"
+				},
+				{
+					"name": "Напряжение",
+					"value": "1.4 В"
+				}
+			]
+		},
+		{
+			"name": "Kingston A400 240GB",
+			"type": "rom",
+			"price": 2100,
+			"count": 4,
+			"main_properties": [],
+			"other_properties": [
+				{
+					"name": "Объем",
+					"value": "240GB"
+				},
+				{
+					"name": "Скорость чтения / записи",
+					"value": "500 / 450 МБ/сек"
+				},
+				{
+					"name": "Тип памяти",
+					"value": "TLC"
+				},
+				{
+					"name": "Интерфейс",
+					"value": "SATA 3"
+				},
+				{
+					"name": "Форм-фактор",
+					"value": "2.5''"
+				},
+				{
+					"name": "Тип",
+					"value": "SSD"
+				}
+			]
+		},
+		{
+			"name": "Samsung 990 PRO 4TB",
+			"type": "rom",
+			"price": 25000,
+			"count": 1,
+			"main_properties": [],
+			"other_properties": [
+				{
+					"name": "Объем",
+					"value": "4 ТБ"
+				},
+				{
+					"name": "Скорость чтения / записи",
+					"value": "7450 / 6900 МБ/сек"
+				},
+				{
+					"name": "Тип памяти",
+					"value": "TLC"
+				},
+				{
+					"name": "Интерфейс",
+					"value": "PCI-E 4.0x4"
+				},
+				{
+					"name": "Форм-фактор",
+					"value": "M2 2280"
+				},
+				{
+					"name": "Тип",
+					"value": "SSD"
+				}
+			]
+		},
+		{
+			"name": "HDD WD Blue 2 ТБ",
+			"type": "rom",
+			"price": 4300,
+			"count": 1,
+			"main_properties": [],
+			"other_properties": [
+				{
+					"name": "Скорость чтения / записи",
+					"value": "180/ 150 МБ/сек"
+				},
+				{
+					"name": "Скорость вращения",
+					"value": "7200 об/мин"
+				},
+				{
+					"name": "Интерфейс",
+					"value": "SATA 3"
+				},
+				{
+					"name": "Форм-фактор",
+					"value": "3.5''"
+				},
+				{
+					"name": "Объем",
+					"value": "2 ТБ"
+				},
+				{
+					"name": "Тип",
+					"value": "HDD"
+				}
+			]
+		},
+		{
+			"name": "Deepcool GAMMAXX GT",
+			"type": "cooler",
+			"price": 1400,
+			"count": 3,
+			"main_properties": [],
+			"other_properties": [
+				{
+					"name": "Диаметр вентилятора",
+					"value": "120 мм"
+				},
+				{
+					"name": "TDP",
+					"value": "150 Вт"
+				},
+				{
+					"name": "Высота кулера",
+					"value": "156 мм"
+				},
+				{
+					"name": "Тип",
+					"value": "Башенный"
+				},
+				{
+					"name": "Количество тепловых трубок",
+					"value": "4"
+				},
+				{
+					"name": "Совместимость",
+					"value": "LGA 1151, LGA 1151 v2, LGA 1200, LGA 1700, AM4, AM5"
+				}
+			]
+		},
+		{
+			"name": "Noctua NH-D15",
+			"type": "cooler",
+			"price": 7500,
+			"count": 1,
+			"main_properties": [],
+			"other_properties": [
+				{
+					"name": "Диаметр вентилятора",
+					"value": "135 мм"
+				},
+				{
+					"name": "TDP",
+					"value": "250 Вт"
+				},
+				{
+					"name": "Высота кулера",
+					"value": "165 мм"
+				},
+				{
+					"name": "Тип",
+					"value": "Башенный"
+				},
+				{
+					"name": "Количество тепловых трубок",
+					"value": "6"
+				},
+				{
+					"name": "Совместимость",
+					"value": "LGA 1151, LGA 1151 v2, LGA 1200, LGA 1700, AM4, AM5"
+				}
+			]
+		},
+		{
+			"name": "BE Quiet! SYSTEM POWER 10 550W",
+			"type": "power_unit",
+			"price": 4500,
+			"count": 3,
+			"main_properties": [],
+			"other_properties": [
+				{
+					"name": "Мощность",
+					"value": "550 Вт"
+				},
+				{
+					"name": "Сертификат",
+					"value": "80 PLUS Bronze"
+				},
+				{
+					"name": "Форм-фактор",
+					"value": "ATX"
+				},
+				{
+					"name": "Модульный",
+					"value": "Нет"
+				}
+			]
+		},
+		{
+			"name": "Seasonic Prime Titanium 1000W",
+			"type": "power_unit",
+			"price": 21000,
+			"count": 1,
+			"main_properties": [],
+			"other_properties": [
+				{
+					"name": "Мощность",
+					"value": "1 кВт"
+				},
+				{
+					"name": "Сертификат",
+					"value": "80 PLUS Titanium "
+				},
+				{
+					"name": "Форм-фактор",
+					"value": "ATX"
+				},
+				{
+					"name": "Модульный",
+					"value": "Да"
+				}
+			]
+		},
+		{
+			"name": "Deepcool Matrexx 70",
+			"type": "case",
+			"price": 4500,
+			"count": 1,
+			"main_properties": [],
+			"other_properties": [
+				{
+					"name": "Типоразмер",
+					"value": "Midi-Tower"
+				},
+				{
+					"name": "Расположение БП",
+					"value": "Нижнее"
+				},
+				{
+					"name": "Макс длина видеокарты",
+					"value": "380 мм"
+				},
+				{
+					"name": "Макс длина кулера",
+					"value": "168 мм"
+				},
+				{
+					"name": "Материал бокового окна",
+					"value": "Закаленное стекло"
+				},
+				{
+					"name": "Макс размер материнской платы",
+					"value": "EATX"
+				}
+			]
+		},
+		{
+			"name": "HZXT H210",
+			"type": "case",
+			"price": 7500,
+			"count": 1,
+			"main_properties": [],
+			"other_properties": [
+				{
+					"name": "Типоразмер",
+					"value": "Mini-Tower"
+				},
+				{
+					"name": "Расположение БП",
+					"value": "Нижнее"
+				},
+				{
+					"name": "Макс длина видеокарты",
+					"value": "325 мм"
+				},
+				{
+					"name": "Макс высота кулера",
+					"value": "165 мм"
+				},
+				{
+					"name": "Материал бокового окна",
+					"value": "Закаленное стекло"
+				},
+				{
+					"name": "Макс размер материнской платы",
+					"value": "Mini-ITX"
+				}
+			]
+		},
+		{
+			"name": "Corsair Obsidian 1000D",
+			"type": "case",
+			"price": 25000,
+			"count": 1,
+			"main_properties": [],
+			"other_properties": [
+				{
+					"name": "Типоразмер",
+					"value": "Super-Tower"
+				},
+				{
+					"name": "Расположение блоков питания",
+					"value": "Оба внизу"
+				},
+				{
+					"name": "Макс длина видеокарты",
+					"value": "400 мм (по факту - неограничено)"
+				},
+				{
+					"name": "Макс высота кулера",
+					"value": "180 мм"
+				},
+				{
+					"name": "Материал бокового окна",
+					"value": "Закаленное стекло"
+				},
+				{
+					"name": "Макс размер материнской платы",
+					"value": "2 мат платы: EATX + Mini-ITX"
+				}
+			]
+		}
+	]
+}
