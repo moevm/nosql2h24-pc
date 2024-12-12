@@ -249,6 +249,30 @@
 						</label>
 					</div>
 				</div>
+
+				<div class="components__filter filter">
+					<h4 class="filter__title">Фильтры</h4>
+					<div class="filter__block">
+						<div class="input">
+							<input class="input__text" id="filter_name" type="text" placeholder="">
+							<span>Название</span>
+						</div>
+					</div>
+					<div class="filter__block">
+						<div class="filter__subtitle">Цена</div>
+						<div class="input">
+							<input class="input__text" id="filter_from" type="number" min="0" placeholder="">
+							<span>Цена от</span>
+						</div>
+						<div class="input">
+							<input class="input__text" id="filter_to" type="number" min="0" placeholder="">
+							<span>Цена до</span>
+						</div>
+					</div>
+				</div>
+				<div style="display: flex;justify-content: center;">
+					<button class="btn" id="filter_submit">Применить фильтры</button>
+				</div>
 				<div style="display: flex;justify-content: center;" class="hide">
 					<a href="add-edit" class="btn" id="add">Добавить товар</a>
 

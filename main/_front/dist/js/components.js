@@ -11,6 +11,11 @@ let global_id_for_dialog;
 
 const header_nav = document.querySelector("#header_nav");
 
+const filter_name = document.querySelector("#filter_name");
+const filter_from = document.querySelector("#filter_from");
+const filter_to = document.querySelector("#filter_to");
+const filter_submit = document.querySelector("#filter_submit");
+
 let isAdmin = false;
 
 const addAdminPanel = () => {
@@ -60,9 +65,31 @@ const openDialog = (name, id) => {
 	btn_no.addEventListener("click", no_event_handler)
 }
 
+function createQueryParams(baseUrl, filters) {
+	const params = new URLSearchParams();
 
-const addCards = (type) => {
-	fetch(`http://localhost:4444/components${type ? "?type=" + type : ""}`)
+	Object.entries(filters).forEach(([key, value]) => {
+		if (Array.isArray(value)) {
+			// Если значение — массив
+			value.forEach(val => params.append(`${key}[]`, val));
+		} else if (typeof value === "object" && value !== null) {
+			// Если значение — объект
+			Object.entries(value).forEach(([subKey, subValue]) =>
+				params.append(`${key}[${subKey}]`, subValue)
+			);
+		} else {
+			// Если значение — примитив
+			params.append(key, value);
+		}
+	});
+
+	return `${baseUrl}?${params.toString()}`;
+}
+
+const addCards = (filters) => {
+	const query = createQueryParams("http://localhost:4444/components", filters)
+	console.log(query)
+	fetch(query)
 		.then(res => res.json())
 		.then(data => {
 			console.log(data);
@@ -114,7 +141,10 @@ choiceLists.forEach((choiceList) => {
 					console.log(choice.dataset.value);
 					console.log("here");
 					if (choiceList.id === "choice_components") {
-						addCards(choice.dataset.value)
+						const params = {
+							type: choice.dataset.value
+						};
+						addCards(params)
 					}
 				}else {
 					choice.classList.remove("active");
@@ -123,6 +153,7 @@ choiceLists.forEach((choiceList) => {
 		});
 	});
 })
+
 
 
 const btn_add = document.querySelector("#add");
@@ -142,7 +173,25 @@ document.addEventListener("DOMContentLoaded", function() {
 				addAdminPanel();
 				btn_add.parentElement.classList.remove('hide');
 			}
-			addCards("cpu");
+			const params = {
+				type: "cpu"
+			};
+
+			addCards(params);
 		})
 })
 
+filter_submit.addEventListener('click', () => {
+	const params = {};
+	if (filter_name.value.trim() !== ""){
+		params["name"] = filter_name.value.trim();
+	}
+	if (filter_to.value.trim() !== ""){
+		params["max_price"] = filter_to.value;
+	}
+	if (filter_from.value.trim() !== ""){
+		params["min_price"] = filter_from.value;
+	}
+	params["type"] = choice_components.dataset.value;
+	addCards(params);
+})
