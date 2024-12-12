@@ -15,6 +15,8 @@ const filter_name = document.querySelector("#filter_name");
 const filter_from = document.querySelector("#filter_from");
 const filter_to = document.querySelector("#filter_to");
 const filter_submit = document.querySelector("#filter_submit");
+const sort_by = document.querySelector("#sort_by");
+const sort_in = document.querySelector("#sort_in");
 
 let isAdmin = false;
 
@@ -97,7 +99,7 @@ const addCards = (filters) => {
 			data.forEach((item) => {
 				cards_place.insertAdjacentHTML("beforeend", `
 				<div class="card" data-id="${item._id}">
-					<img src="https://via.placeholder.com/200x200" alt="">
+					<img src="img/img200x200.png" alt="">
 					<div class="card__description">
 						<div class="card__name">${item.name}</div>
 						<div class="card__price">${item.price} ₽</div>
@@ -144,7 +146,33 @@ choiceLists.forEach((choiceList) => {
 						const params = {
 							type: choice.dataset.value
 						};
+						if (sort_by.dataset.value.trim() !== ""){
+							params["sort_by"] = sort_by.dataset.value
+						}
+						if (sort_in.dataset.value.trim() !== ""){
+							params["sort_in"] = sort_in.dataset.value;
+						}
 						addCards(params)
+					}
+					if (choiceList.id === "sort_by" || choiceList.id === "sort_in") {
+						const params = {};
+						if (filter_name.value.trim() !== ""){
+							params["name"] = filter_name.value.trim();
+						}
+						if (filter_to.value.trim() !== ""){
+							params["max_price"] = filter_to.value;
+						}
+						if (filter_from.value.trim() !== ""){
+							params["min_price"] = filter_from.value;
+						}
+						if (sort_by.dataset.value.trim() !== ""){
+							params["sort_by"] = sort_by.dataset.value
+						}
+						if (sort_in.dataset.value.trim() !== ""){
+							params["sort_in"] = sort_in.dataset.value;
+						}
+						params["type"] = choice_components.dataset.value;
+						addCards(params);
 					}
 				}else {
 					choice.classList.remove("active");
@@ -176,7 +204,12 @@ document.addEventListener("DOMContentLoaded", function() {
 			const params = {
 				type: "cpu"
 			};
-
+			if (sort_by.dataset.value.trim() !== ""){
+				params["sort_by"] = sort_by.dataset.value
+			}
+			if (sort_in.dataset.value.trim() !== ""){
+				params["sort_in"] = sort_in.dataset.value;
+			}
 			addCards(params);
 		})
 })
@@ -191,6 +224,12 @@ filter_submit.addEventListener('click', () => {
 	}
 	if (filter_from.value.trim() !== ""){
 		params["min_price"] = filter_from.value;
+	}
+	if (sort_by.dataset.value === "price"){
+		params["sort_by"] = "price"
+	}
+	if (sort_in.dataset.value.trim() !== ""){
+		params["sort_in"] = sort_in.dataset.value;
 	}
 	params["type"] = choice_components.dataset.value;
 	addCards(params);

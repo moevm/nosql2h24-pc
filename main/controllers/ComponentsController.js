@@ -57,30 +57,20 @@ export const getAll = async (req, res) => {
 			})
 		}
 		const query = conditions.length > 0 ? {$and: conditions} : {}
-		const components = await ComponentsModel.find(query)
-		console.log(components);
-		// let components;
-		// if (req.query.type){
-		// 	components = await ComponentsModel.find({type: req.query.type}).exec();
-		// }else {
-		// 	components = await ComponentsModel.find().exec();
-		// }
-		// const conditions = [];
-		// conditions.push({
-		// 	main_properties: {
-		// 		$elemMatch: {
-		// 			name: "Сокет (разъем на плате)",
-		// 			value: "LGA 1700"
-		// 		}
-		// 	},
-		// })
-		// conditions.push({
-		// 	price: {$gte: 9000, $lte: 18000}
-		// })
-		// const query = conditions.length > 0 ? {$and: conditions} : {}
-		// const components2 = await ComponentsModel.find(query)
-		// console.log(components2);
-		res.json(components);
+		if (req.query.sort_by && req.query.sort_in) {
+			if (req.query.sort_by  === "price"){
+				console.log("by price!")
+				const components = await ComponentsModel.find(query).sort({"price": req.query.sort_in === "to up" ? 1 : -1});
+				res.json(components);
+			}else {
+				const components = await ComponentsModel.find(query).sort({"name": req.query.sort_in === "to up" ? 1 : -1});
+				res.json(components);
+			}
+		}else {
+			const components = await ComponentsModel.find(query)
+			res.json(components);
+		}
+		// console.log(components);
 	}catch (err){
 		console.warn(err);
 		res.status(500).json({
@@ -215,11 +205,10 @@ export const exportToClient = async (req, res) => {
 
 export const importFromClient = async (req, res) => {
 	try {
-		console.log(req.body);
 		if (req.body.components){
 			const components = req.body.components;
 			for (const component of components){
-				const component_from_db = await ComponentsModel.find({name: req.body.name});
+				const component_from_db = await ComponentsModel.find({name: component.name});
 				if (!component_from_db[0]){
 					const doc = new ComponentsModel({
 						name: component.name,
