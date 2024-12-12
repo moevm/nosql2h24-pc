@@ -15,7 +15,7 @@ services:
     container_name: express-server
     image: nosql2h24-pc-express:0.8
     ports:
-      - "4444:4444"
+      - "127.0.0.1:4444:4444"
 
     depends_on:
       - db
